@@ -93,7 +93,7 @@ console.log(23,data)
       </Link>
       <div style={{ display: 'flex', flexDirection: 'row' }}>
 
-          <Link to="/stats" style={{ textDecoration: 'none' }}>
+          <Link to="/" style={{ textDecoration: 'none' }}>
             <Burned>
               <span role="img" aria-label="fire">
                Reward 🔥

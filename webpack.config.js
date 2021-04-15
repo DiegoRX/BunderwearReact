@@ -7,7 +7,7 @@ const nodeEnv = process.env.NODE_ENV === 'development';
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
   },
   resolve: {
