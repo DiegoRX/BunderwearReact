@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useContext } from 'react'
+import React, { useState, useCallback, useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import { useWeb3Context } from 'web3-react'
 import { Link } from 'react-router-dom'
@@ -13,6 +13,7 @@ import RedeemButton from '../../components/RedeemButton'
 import Checkout from '../../components/Checkout'
 import { amountFormatter } from '../../utils'
 import ContactUs from '../../components/Form'
+import getBlockchain from '../../ethereum.js';
 
 export function Header({ totalSupply, ready, balanceSOCKS, setShowConnect }) {
 //   const context = useWeb3Context()
@@ -77,7 +78,32 @@ export function Header({ totalSupply, ready, balanceSOCKS, setShowConnect }) {
 //   console.log(txReceipt)
 // }
 // init1()
-const {rewardLiquidityProviders, test, data} = useContext(Context);
+//  const init = async () => {
+//    const { simpleStorage, accounts } = await getBlockchain();
+//    console.log(1, simpleStorage)
+//    setSimpleStorage(simpleStorage);
+
+
+//  console.log(20, simpleStorage)
+//  console.log(data, 'data pues')
+//  };
+//  useEffect(() => {
+//  const init = async () => {
+  
+//    const { simpleStorage, accounts } = await getBlockchain();
+//    console.log(1, simpleStorage)
+//    setSimpleStorage(simpleStorage);
+
+
+//  console.log(20, simpleStorage)
+//  console.log(data, 'data pues')
+//  };
+//  }, []);
+const [tester, setTester] = useState(null);
+
+
+
+const {rewardLiquidityProviders, test, data, init} = useContext(Context);
 console.log(23,data)
   return (
     <HeaderFrame
@@ -95,9 +121,13 @@ console.log(23,data)
 
           <Link to="/" style={{ textDecoration: 'none' }}>
             <Burned>
+              { data === undefined ?
+              <button onClick={init}>Conect to metamask</button>:
               <span role="img" aria-label="fire">
-               Reward 🔥
-              </span>{data}
+              {data}
+              </span>              
+              }
+
               {/* {500 - totalSupply} <HideMobile>redeemed</HideMobile> */}
             </Burned>
           </Link>

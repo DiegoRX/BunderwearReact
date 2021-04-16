@@ -1,6 +1,6 @@
 import detectEthereumProvider from '@metamask/detect-provider';
 import { ethers, Contract } from 'ethers';
-import BUNDERWEAR from './contracts/BUNDERWEAR.json';
+import BUNDERWEAR from '../build/contracts/BUNDERWEAR.json';
 import Web3 from 'web3';
 
 const getBlockchain = () =>
@@ -8,11 +8,11 @@ const getBlockchain = () =>
     let provider = await detectEthereumProvider();
     if(provider) {
       console.log('Ethereum successfully detected!')
-      let accounts = await provider.request({ method: 'eth_requestAccounts' });
+      const accounts = await provider.request({ method: 'eth_requestAccounts' });
       const networkId = await provider.request({ method: 'net_version' })
       const web3Provider = new Web3(provider);
       
-      const deployedNetwork = BUNDERWEAR.networks['5777'].address
+      const deployedNetwork = BUNDERWEAR.networks['97'].address
       const ABI = BUNDERWEAR.abi
       const simpleStorage = new web3Provider.eth.Contract(
         ABI,
@@ -24,7 +24,7 @@ const getBlockchain = () =>
       //   BUNDERWEAR.abi,
       //   signer
       // );     
-      resolve({simpleStorage});
+      resolve({simpleStorage, accounts});
       console.log(provider)
       console.log(1, accounts)
       console.log(networkId)
@@ -36,7 +36,6 @@ const getBlockchain = () =>
 
     const addresses = await web3Provider.eth.getAccounts()
     console.log(addresses)
-    resolve({simpleStorage, accounts})
       return;
     }
     reject('Install Metamask');

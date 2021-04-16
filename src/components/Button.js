@@ -25,7 +25,7 @@ const ButtonFrame = styled.button`
   pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
   border-width: ${props => (props.type === 'cta' ? '0px' : props.disabled ? '0px' : '1px')};
   border-color: ${props => (props.type === 'cta' ? 'none' : props.disabled ? 'none' : props.theme.uniswapPink)};
-  background-color: #EEB92E;
+  background-color: red;
   // {props =>
   //   props.type === 'cta'
   //     ? props.disabled
@@ -39,14 +39,15 @@ const ButtonFrame = styled.button`
   // {props =>
   //   props.type === 'cta' ? (props.disabled ? 'none' : '0px 4px 20px rgba(239, 162, 250, 0.7)') : 'none'};
 
-  color: ${props =>
-    props.type === 'cta'
-      ? props.disabled
-        ? props.theme.textDisabled
-        : props.theme.white
-      : props.disabled
-      ? '#aeaeae'
-      : props.theme.uniswapPink};
+  color: white;
+  // {props =>
+  //   props.type === 'cta'
+  //     ? props.disabled
+  //       ? props.theme.textDisabled
+  //       : props.theme.white
+  //     : props.disabled
+  //     ? '#aeaeae'
+  //     : props.theme.uniswapPink};
   transform: scale(1);
   transition: transform 0.3s ease;
 
@@ -73,12 +74,12 @@ const SpinnerWrapper = styled(Spinner)`
 export default function Button({ text, onClick = () => {}, preventDefault = true, pending, ...rest }) {
   return (
     <ButtonFrame
-      // onClick={e => {
-      //   if (preventDefault) {
-      //     e.preventDefault()
-      //   }
-      //   onClick(e)
-      // }}
+      onClick={e => {
+        if (preventDefault) {
+          e.preventDefault()
+        }
+        onClick(e)
+       }}
       // {...rest}
     >
       {pending ? (

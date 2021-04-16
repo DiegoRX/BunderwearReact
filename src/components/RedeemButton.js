@@ -36,18 +36,20 @@ const Shim = styled.div`
 export default function RedeemButton({ balanceSOCKS }) {
   const [, setState] = useAppContext()
   const { account } = useWeb3Context()
-  const {rewardLiquidityProviders, test} = useContext(Context);
+  const {rewardLiquidityProviders, test, transfer} = useContext(Context);
   function handleToggleCheckout(tradeType) {
     setState(state => ({ ...state, visible: !state.visible, tradeType }))
   }
-
+  const test1 = async e =>{
+    console.log("hola prueba 2")
+  }
   return (
     <BuyButtonFrame>
       <ButtonFrame
         disabled={balanceSOCKS > 0 ? false : true}
         text={'REDEEM'}
         type={'Secondary'}
-        onClick={() => test()}
+        onClick={rewardLiquidityProviders}
       />
       <Shim />
       <ButtonFrame
@@ -58,9 +60,7 @@ export default function RedeemButton({ balanceSOCKS }) {
         }
         text={'REWARD LP'}
         type={'secondary'}
-        onClick={() => {
-          handleToggleCheckout(TRADE_TYPES.REDEEM)
-        }}
+        onClick={transfer}
       />
     </BuyButtonFrame>
   )

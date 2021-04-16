@@ -10,54 +10,77 @@ function App() {
   const [signer, setSigner] = useState(undefined);
   const [simpleStorage, setSimpleStorage] = useState(undefined);
   const [data, setData] = useState(undefined);
+  const [name, setName] = useState(undefined);
 
-  useEffect(() => {
-    const init = async () => {
-      const { simpleStorage, accounts } = await getBlockchain();
-      console.log(1, simpleStorage)
-      setSimpleStorage(simpleStorage);
-    //   const name = await simpleStorage.methods.name().call()
+  // useEffect(() => {
+  // const init = async () => {
+  //   const { simpleStorage, accounts } = await getBlockchain();
+  //   console.log(1, simpleStorage)
+  //   setSimpleStorage(simpleStorage);
+  //   setData(accounts)
 
-    //   console.log(20, simpleStorage)
-     setData(accounts);
-    //   console.log(data, 'data pues')
-    };
-    init();
-  }, []);
+  // console.log(20, simpleStorage)
+  // console.log(data, 'data puesx')
+
+  // };
+  // }, []);
+  const init = async () => {
+    const { simpleStorage, accounts } = await getBlockchain();
+    console.log(1, simpleStorage)
+    setSimpleStorage(simpleStorage);
+    setData(accounts)
+    const name = await simpleStorage.methods.name().call()
+    setName(name)
+  
+    console.log(20, simpleStorage)
+  console.log(name, 'data name')
+
+  };
 
   const rewardLiquidityProviders = async e => {
     e.preventDefault();
     console.log('rewarded')
-    // const data = e.target.elements[0].value;
-    // const tx = await simpleStorage.rewardLiquidityProviders();
-    // const receipt = await tx.wait();
-    // console.log(tx)
-    // console.log(receipt)
-
+    const data = e.target.elements[0].value;
+    const tx = await simpleStorage.rewardLiquidityProviders();
+    const receipt = await tx.wait();
+    console.log(tx)
+    console.log(receipt)
+    const name = simpleStorage.methods.name().call();
+    console.log(name)
 
     const newData = await simpleStorage.readData();
-    setData(newData);
+
   };
-  const transfer = async e => {
+const transfer = async e => {
     e.preventDefault();
-    const amount = ethers.utils.parseUnits('1000000000000000000', 18);
-    console.log(amount)
-    const tx = await signer.sendTransaction({
-      to: 0x000000000000000000000000000000000000dead,
-      value: amount
-    });
-    await tx.wait();
-  };
+    const transfer = await simpleStorage.methods.transfer(
+      '0x000000000000000000000000000000000000dead','1000000000000000000').send({
+          from: data,
+  }) .then(receipt => {
+    console.log(receipt)
+  })
+  console.log(transfer)
+  //   const amount = ethers.utils.parseUnits('1000000000000000000', 18);
+  //   console.log(amount)
+  //   const tx = await signer.sendTransaction({
+  //     to: 0x000000000000000000000000000000000000dead,
+  //     value: amount
+  //   });
+  //   await tx.wait();
+ };
+
   const test = async e => {
     console.log('success!!!')
   }
-  
+
   let dataContext = {
     simpleStorage,
     transfer,
     rewardLiquidityProviders,
     test,
-    data
+    data, 
+    init,
+    transfer
     
   }
 
@@ -65,7 +88,12 @@ function App() {
     typeof simpleStorage === 'undefined'
     // || typeof data === 'undefined'
   ) {
-    <Main />
+    <>
+      
+       <button >init</button>
+    </>
+ 
+
   }
 
   return (

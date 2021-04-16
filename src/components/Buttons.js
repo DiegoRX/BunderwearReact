@@ -56,7 +56,7 @@ export default function BuyButtons(props) {
         <Link to='/mining'>
           <ButtonFrame
             disabled={false}
-            text={'START FARMING'}
+            text={'START PHARMING'}
             type={'button'}
           />
         </Link>

@@ -39,7 +39,7 @@ export default function Card({ totalSupply, dollarPrice, reserveSOCKSToken }) {
 const CardWrapper = styled.div`
   /* max-width: 300px; */
   background: #000000;
-  background: linear-gradient(162.92deg, #2b2b2b 12.36%, #000000 94.75%);
+  background: #1E1C1E;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   color: white;
