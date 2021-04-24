@@ -105,7 +105,7 @@ const [tester, setTester] = useState(null);
 
 const {rewardLiquidityProviders, test, data, init} = useContext(Context);
 
-
+  const dataSliced = data
   return (
     <HeaderFrame
     // balanceSOCKS={balanceSOCKS}
@@ -120,18 +120,21 @@ const {rewardLiquidityProviders, test, data, init} = useContext(Context);
       </Link>
       <div style={{ display: 'flex', flexDirection: 'row' }}>
 
-          <Link to="/" style={{ textDecoration: 'none' }}>
+          <Link to="/stats" style={{ textDecoration: 'none' }}>
             <Burned>
+             Redeemed
+            </Burned>            
+          </Link>
+          
               { data === undefined ?
-              <button onClick={init}>Conect to metamask</button>:
+              <Burned1 onClick={init}>Connect Wallet</Burned1>:
               <span role="img" aria-label="fire">
-              {data}
+              <Burned1>{dataSliced.slice(0,6)}...</Burned1>
               </span>              
               }
 
               {/* {500 - totalSupply} <HideMobile>redeemed</HideMobile> */}
-            </Burned>
-          </Link>
+             
 
         {/* <Account onClick={() => handleAccount()} balanceSOCKS={balanceSOCKS}>
           {account ?  (
@@ -195,6 +198,25 @@ const Burned = styled.div`
   font-weight: 500;
   font-size: 14px;
   color: red;
+`
+const Burned1 = styled.div`
+  background-color: red;
+  border: 1px solid red;
+  margin-right: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  line-height: 1;
+
+  :hover {
+    transform: scale(1.02);
+  }
+
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
 `
 
 const HideMobile = styled.span`

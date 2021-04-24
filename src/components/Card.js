@@ -12,8 +12,8 @@ export default function Card({ totalSupply, dollarPrice, reserveSOCKSToken }) {
       options={{ scale: 1.01, max: 10, glare: true, 'max-glare': 1, speed: 1000 }}
     >
       <CardWrapper>
-        <Title>Bunderwear Edition 0</Title>
-        <SubTitle>$underwear</SubTitle>
+        <Title>Bunderwear Genesis</Title>
+        <SubTitle>Bunderwear</SubTitle>
         <Gallery />
         <MarketData>
           <span>
@@ -39,7 +39,7 @@ export default function Card({ totalSupply, dollarPrice, reserveSOCKSToken }) {
 const CardWrapper = styled.div`
   /* max-width: 300px; */
   background: #000000;
-  background: linear-gradient(to bottom, #adb5bd, #6c757d);
+  background: linear-gradient(to bottom, #343a40, #212529);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   color: white;

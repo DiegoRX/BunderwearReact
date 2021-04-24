@@ -53,21 +53,22 @@ export default function BuyButtons(props) {
         </Link>
       </BuyButtonFrame>
       <BuyButtonFrame>
-        <Link to='/mining'>
-          <ButtonFrame
-            disabled={false}
-            text={'START PHARMING'}
-            type={'button'}
-          />
-        </Link>
-        <Link to='/GetLPTokens'>
+      <Link to='/GetLPTokens'>
           <ButtonFrame
             disabled={false}
             text={'GET LP TOKENS'}
             type={'button'}
           />
         </Link>
-        
+        </BuyButtonFrame>
+      <BuyButtonFrame>
+        <Link to='/mining'>
+          <ButtonFrame
+            disabled={false}
+            text={'START PHARMING'}
+            type={'button'}
+          />
+        </Link>        
       </BuyButtonFrame>
     </>
   )

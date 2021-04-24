@@ -17,40 +17,26 @@ export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOC
             <span role="img" aria-label="socks">
               🧦
             </span>
-            Initial SOCKS
+            Initial BUND
           </p>
-          <p>500</p>
+          <p>50</p>
         </Description>
         <Description>
           <p>
             <span role="img" aria-label="socks">
               🔥
             </span>
-            Redeemed SOCKS
+            Redeemed BUND
           </p>
           <p>{500 - totalSupply}</p>
         </Description>
-        <Description>
-          <p>
-            <span role="img" aria-label="socks">
-              💦
-            </span>
-            SOCKS Pool
-          </p>
-          <p>{amountFormatter(reserveSOCKSToken, 18, 0)}</p>
-        </Description>
+
         <Shim />
         <Footer>
-          The price of SOCKS changes when tokens are bought and sold.
+
           <br />
           <br />
-          <a
-            href="https://medium.com/frst/money-laundry-the-rise-of-the-crypto-sock-market-f979aafc3796"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read more.
-          </a>
+
         </Footer>
       </Content>
     </AppWrapper>
