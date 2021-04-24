@@ -10,21 +10,24 @@ const getBlockchain = () =>
       console.log('Ethereum successfully detected!')
       const accounts = await provider.request({ method: 'eth_requestAccounts' });
       const networkId = await provider.request({ method: 'net_version' })
-      const web3Provider = new Web3(provider);
-      
-      const deployedNetwork = BUNDERWEAR.networks['97'].address
-      const ABI = BUNDERWEAR.abi
-      const simpleStorage = new web3Provider.eth.Contract(
-        ABI,
-        deployedNetwork
-      )
-      // const signer = provider.getSigner();
-      // const simpleStorage = new Contract(
-      //   BUNDERWEAR.networks['5777'].address,
-      //   BUNDERWEAR.abi,
-      //   signer
-      // );     
+      // const web3Provider = new Web3(provider);
+      provider = new ethers.providers.Web3Provider(provider);
+
+
+      // const deployedNetwork = BUNDERWEAR.networks['97'].address
+      // const ABI = BUNDERWEAR.abi
+      // const simpleStorage = new web3Provider.eth.Contract(
+      //   ABI,
+      //   deployedNetwork
+      // )
+      const signer = provider.getSigner();
+      const simpleStorage = new Contract(
+        BUNDERWEAR.networks[networkId].address,
+        BUNDERWEAR.abi,
+        signer
+      );     
       resolve({simpleStorage, accounts});
+      
       console.log(provider)
       console.log(1, accounts)
       console.log(networkId)

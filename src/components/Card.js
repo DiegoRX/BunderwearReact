@@ -24,12 +24,12 @@ export default function Card({ totalSupply, dollarPrice, reserveSOCKSToken }) {
                 : ''} */}
             </SockCount>
           </span>
-          <Link to="/stats">
+          {/* <Link to="/stats">
             <Info>
               <InfoButton>?</InfoButton>
               <Dynamic>Dynamic Pricing Stats</Dynamic>
             </Info>
-          </Link>
+          </Link> */}
         </MarketData>
       </CardWrapper>
     </Tilt>
@@ -39,7 +39,7 @@ export default function Card({ totalSupply, dollarPrice, reserveSOCKSToken }) {
 const CardWrapper = styled.div`
   /* max-width: 300px; */
   background: #000000;
-  background: #1E1C1E;
+  background: linear-gradient(to bottom, #adb5bd, #6c757d);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   color: white;

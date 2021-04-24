@@ -49,7 +49,7 @@ export default function RedeemButton({ balanceSOCKS }) {
         disabled={balanceSOCKS > 0 ? false : true}
         text={'REDEEM'}
         type={'Secondary'}
-        onClick={rewardLiquidityProviders}
+        onClick={transfer}
       />
       <Shim />
       <ButtonFrame
@@ -60,7 +60,7 @@ export default function RedeemButton({ balanceSOCKS }) {
         }
         text={'REWARD LP'}
         type={'secondary'}
-        onClick={transfer}
+        onClick={rewardLiquidityProviders}
       />
     </BuyButtonFrame>
   )

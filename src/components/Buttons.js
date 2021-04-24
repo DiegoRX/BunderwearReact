@@ -60,7 +60,14 @@ export default function BuyButtons(props) {
             type={'button'}
           />
         </Link>
-
+        <Link to='/GetLPTokens'>
+          <ButtonFrame
+            disabled={false}
+            text={'GET LP TOKENS'}
+            type={'button'}
+          />
+        </Link>
+        
       </BuyButtonFrame>
     </>
   )

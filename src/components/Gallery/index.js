@@ -1,17 +1,17 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import bunderwear from './genesisnftfinalhd.gif'
+import bunderwear from './genesis.png'
 
 const GalleryFrame = styled.div`
   width: 100%;
-  height: 80%;
+  height: 100%;
   min-height: 258px;
   display: flex;
   align-items: center;
   flex-direction: center;
   /* background-color: ${props => props.theme.black}; */
-  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.05);
+  // box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.05);
 `
 
 const ImgStyle = styled.img`

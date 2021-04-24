@@ -104,7 +104,8 @@ const [tester, setTester] = useState(null);
 
 
 const {rewardLiquidityProviders, test, data, init} = useContext(Context);
-console.log(23,data)
+
+
   return (
     <HeaderFrame
     // balanceSOCKS={balanceSOCKS}

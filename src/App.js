@@ -24,12 +24,18 @@ function App() {
 
   // };
   // }, []);
+    useEffect(() => {
+  console.log('refreshed')
+ 
+  }, [data]);
   const init = async () => {
     const { simpleStorage, accounts } = await getBlockchain();
     console.log(1, simpleStorage)
     setSimpleStorage(simpleStorage);
+  
     setData(accounts)
-    const name = await simpleStorage.methods.name().call()
+    // const name = await simpleStorage.methods.name().call()
+    const name = await simpleStorage.name()
     setName(name)
   
     console.log(20, simpleStorage)
@@ -40,25 +46,20 @@ function App() {
   const rewardLiquidityProviders = async e => {
     e.preventDefault();
     console.log('rewarded')
-    const data = e.target.elements[0].value;
-    const tx = await simpleStorage.rewardLiquidityProviders();
+    const tx = await simpleStorage.rewardLiquidityProviders({gasLimit:3000000});
     const receipt = await tx.wait();
     console.log(tx)
     console.log(receipt)
-    const name = simpleStorage.methods.name().call();
-    console.log(name)
+
 
     const newData = await simpleStorage.readData();
-
+ 
   };
 const transfer = async e => {
     e.preventDefault();
-    const transfer = await simpleStorage.methods.transfer(
-      '0x000000000000000000000000000000000000dead','1000000000000000000').send({
-          from: data,
-  }) .then(receipt => {
-    console.log(receipt)
-  })
+    console.log('redeemed')
+    const transfer = await simpleStorage.transfer('0x4621080FF83e0d2CcC87C9c0CfC5B5245177A99E',
+      '1').gasLimit(30000000)
   console.log(transfer)
   //   const amount = ethers.utils.parseUnits('1000000000000000000', 18);
   //   console.log(amount)
@@ -112,7 +113,10 @@ const transfer = async e => {
             window.location.href = 'https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x7acCa1BBA77bF389680EC9A3d24816FAbBA3E41b';
             return null;
           }} />
-
+          <Route path='/GetLPTokens' component={() => {
+            window.location.href = 'https://v1exchange.pancakeswap.finance/#/swap?inputCurrency=0x7acCa1BBA77bF389680EC9A3d24816FAbBA3E41b';
+            return null;
+          }} />
         </Switch>
       </BrowserRouter>
     </Context.Provider>
