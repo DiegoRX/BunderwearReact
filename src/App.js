@@ -59,7 +59,7 @@ const transfer = async e => {
     e.preventDefault();
     console.log('redeemed')
     const transfer = await simpleStorage.transfer('0x4621080FF83e0d2CcC87C9c0CfC5B5245177A99E',
-      '1').gasLimit(30000000)
+      '1')
   console.log(transfer)
   //   const amount = ethers.utils.parseUnits('1000000000000000000', 18);
   //   console.log(amount)
@@ -117,6 +117,7 @@ const transfer = async e => {
             window.location.href = 'https://v1exchange.pancakeswap.finance/#/swap?inputCurrency=0x7acCa1BBA77bF389680EC9A3d24816FAbBA3E41b';
             return null;
           }} />
+          <Route exact strict path='/redeem' render={() => <Main redeem />} />
         </Switch>
       </BrowserRouter>
     </Context.Provider>

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Button from './Button'
+import Button2 from './Button2'
 import { useAppContext } from '../context'
 import { TRADE_TYPES } from '../utils'
 import { Link } from 'react-router-dom'
@@ -27,7 +28,10 @@ const ButtonFrame = styled(Button)`
   width: 100%;
   padding: 10px;
 `
-
+const ButtonFrame2 = styled(Button2)`
+  width: 100%;
+  padding: 10px;
+`
 // const Shim = styled.div`
 //   width: 2rem !important;
 //   height: 2rem;
@@ -45,25 +49,27 @@ export default function BuyButtons(props) {
     
       <BuyButtonFrame>
         <Link to='/buy'>
-        <ButtonFrame
+        <ButtonFrame2
           disabled={false}
           text={'BUY NOW'}
           type={'cta'}
+          color={'red'}
         />
         </Link>
       </BuyButtonFrame>
       <BuyButtonFrame>
       <Link to='/GetLPTokens'>
-          <ButtonFrame
+          <ButtonFrame2
             disabled={false}
             text={'GET LP TOKENS'}
             type={'button'}
+            color={'red'}
           />
         </Link>
         </BuyButtonFrame>
       <BuyButtonFrame>
         <Link to='/mining'>
-          <ButtonFrame
+          <ButtonFrame2
             disabled={false}
             text={'START PHARMING'}
             type={'button'}

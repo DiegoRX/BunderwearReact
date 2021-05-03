@@ -16,6 +16,7 @@ import {
 import Body from '../Body'
 import Stats from '../Stats'
 import Status from '../Status'
+import Redeem from '../Redeem';
 
 // denominated in bips
 const GAS_MARGIN = ethers.BigNumber.from(1000)
@@ -147,7 +148,7 @@ function calculateAmount(
   }
 }
 
-export default function Main({ stats, status }) {
+export default function Main({ stats, status, redeem }) {
   const { library, account } = useWeb3Context()
   const {rewardLiquidityProviders} = useContext(Context);
   // selected token
@@ -527,7 +528,9 @@ export default function Main({ stats, status }) {
     <Stats reserveSOCKSToken={reserveSOCKSToken} totalSupply={totalSupply} ready={ready} balanceSOCKS={balanceSOCKS} />
   ) : status ? (
     <Status totalSupply={totalSupply} ready={ready} balanceSOCKS={balanceSOCKS} />
-  ) : (
+  ) : redeem ? (
+    <Redeem totalSupply={totalSupply} ready={ready} balanceSOCKS={balanceSOCKS} />
+  ) :(
     <Body
       selectedTokenSymbol={selectedTokenSymbol}
       setSelectedTokenSymbol={setSelectedTokenSymbol}

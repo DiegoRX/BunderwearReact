@@ -48112,7 +48112,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-15T18:08:51.057Z",
+  "updatedAt": "2021-04-24T21:55:42.490Z",
   "devdoc": {
     "details": "WhitelistAdmins are responsible for assigning and removing Whitelisted accounts.",
     "methods": {},

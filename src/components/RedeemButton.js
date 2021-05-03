@@ -4,8 +4,10 @@ import { ethers } from 'ethers'
 import { useWeb3Context } from 'web3-react'
 import {Context} from '../../src/context/Context';
 import Button from './Button'
+import Button2 from './Button2'
 import { useAppContext } from '../context'
 import { TRADE_TYPES } from '../utils'
+import {Link} from 'react-router-dom'
 
 const BuyButtonFrame = styled.div`
   margin: 0.5rem 0rem 0.5rem 0rem;
@@ -27,7 +29,9 @@ const BuyButtonFrame = styled.div`
 const ButtonFrame = styled(Button)`
   width: 100%;
 `
-
+const ButtonFrame2 = styled(Button2)`
+  width: 100%;
+`
 const Shim = styled.div`
   width: 1rem !important;
   height: 1rem;
@@ -45,12 +49,14 @@ export default function RedeemButton({ balanceSOCKS }) {
   }
   return (
     <BuyButtonFrame>
-      <ButtonFrame
+              <Link to='/redeem' style={{width:'100%'}}>
+      <ButtonFrame2
         disabled={balanceSOCKS > 0 ? false : true}
         text={'REDEEM'}
         type={'Secondary'}
-        onClick={transfer}
+        transfer={transfer}
       />
+      </Link>
       <Shim />
       <ButtonFrame
         disabled={
