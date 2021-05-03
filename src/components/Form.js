@@ -19,42 +19,38 @@ export default function ContactUs() {
     return (
         <FormContainer>
             <form className="contact-form" onSubmit={sendEmail}>
-            <Input type="hidden" name="contact_number"  />  
-            <InputContainer> 
-            <Input type="text" name="user_name" placeholder="Name" style={{width:'70%'}}/>
-            <Label>Size</Label>
-            <select name="size">
-
-<option value="xs">xs</option>
-<option value="s">s</option>
-<option value="m">m</option>
-<option value="l">l</option>
-<option value="xl">xl</option>
-</select>
-            </InputContainer>
-            <InputContainer>
-            <Input type="text" name="user_address"  placeholder="Address" style={{width:'75%'}}/>
-            <Input type="text" name="unit" placeholder="Unit"style={{width:'25%', marginLeft: '3px'}}/>
-            </InputContainer>
-            <InputContainer>
-            <Input type="text" name="city" placeholder="City"style={{width:'60%'}}/>
-            <Input type="number" name="zip_code" placeholder="ZIP code"style={{width:'40%', marginLeft: '3px'}}/>
-            </InputContainer>
-            <InputContainer>
-            <Input type="text" name="country" placeholder="Country"style={{width:'100%'}}/>
-            </InputContainer>
-            <InputContainer>
-            <Input type="email" name="user_email" placeholder="Email"style={{width:'100%'}}/>
-            </InputContainer>
-            <InputContainer>
-            <Input type="text" name="hash" placeholder="Hash Confirmation"style={{width:'100%'}}/>
-            </InputContainer>
-            <InputContainer>
-            <Input type="submit" value="Send" style={{width:'100%'}} />
-            </InputContainer>
-        </form>
+                <Input type="hidden" name="contact_number" />
+                <InputContainer>
+                    <Input type="text" name="user_name" placeholder="Name" style={{ width: '70%' }} />
+                    <Label>Size</Label>
+                    <select name="size">
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                    </select>
+                </InputContainer>
+                <InputContainer>
+                    <Input type="text" name="user_address" placeholder="Address" style={{ width: '75%' }} />
+                    <Input type="text" name="unit" placeholder="Unit" style={{ width: '25%', marginLeft: '3px' }} />
+                </InputContainer>
+                <InputContainer>
+                    <Input type="text" name="city" placeholder="City" style={{ width: '60%' }} />
+                    <Input type="number" name="zip_code" placeholder="ZIP code" style={{ width: '40%', marginLeft: '3px' }} />
+                </InputContainer>
+                <InputContainer>
+                    <Input type="text" name="country" placeholder="Country" style={{ width: '100%' }} />
+                </InputContainer>
+                <InputContainer>
+                    <Input type="email" name="user_email" placeholder="Email" style={{ width: '100%' }} />
+                </InputContainer>
+                <InputContainer>
+                    <Input type="text" name="hash" placeholder="Hash Confirmation" style={{ width: '100%' }} />
+                </InputContainer>
+                <InputContainer>
+                    <Input type="submit" value="Send" style={{ width: '100%' }} />
+                </InputContainer>
+            </form>
         </FormContainer>
-        
+
     );
 }
 

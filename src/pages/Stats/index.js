@@ -11,7 +11,7 @@ export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOC
     <AppWrapper overlay={state.visible}>
       <Header  />
       <Content>
-        <Title>SOCKS Stats</Title>
+        <Title>BUND Stats</Title>
         <Description>
           <p>
             <span role="img" aria-label="socks">
