@@ -7,6 +7,7 @@ import bunderwear from '../../components/Gallery/genesis.png'
 import NFT from '../../components/Gallery/genesisnftfinalhd.gif'
 import ContactUs from '../../components/Form'
 import Button from '../../components/Button' 
+import ButtonGrey from '../../components/ButtonGrey' 
 import { Context } from '../../context/Context'
 
 export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOCKS }) {
@@ -54,9 +55,9 @@ export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOC
         type={'Secondary'}
         onClick={transfer}
       />
-      <ContactUs>
+      {/* <ContactUs>
 
-      </ContactUs>
+      </ContactUs> */}
       </Content2>
     </AppWrapper>
   )
@@ -100,7 +101,7 @@ const AppWrapper = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  overflow: ${props => (props.overlay ? 'hidden' : 'scroll')};
+  //overflow: ${props => (props.overlay ? 'hidden' : 'scroll')};
   scroll-behavior: smooth;
   position: ${props => (props.overlay ? 'fixed' : 'initial')};
 `
