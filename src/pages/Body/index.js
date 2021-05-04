@@ -106,6 +106,14 @@ const [tester, setTester] = useState(null);
 
 const {rewardLiquidityProviders, test, data, init} = useContext(Context);
 
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setInterval(() => {
+      console.log(data, 7)
+    }, 2000);
+  });
+}
+resolveAfter2Seconds()
   const dataSliced = data
   return (
     <HeaderFrame
@@ -130,7 +138,7 @@ const {rewardLiquidityProviders, test, data, init} = useContext(Context);
               { data === undefined ?
               <Burned1 onClick={init}>Connect Wallet</Burned1>:
               <span role="img" aria-label="fire">
-              <Burned1>{dataSliced.slice(0,6)}...</Burned1>
+              <Burned1>{dataSliced.join().slice(0,6)}...</Burned1>
               </span>              
               }
 

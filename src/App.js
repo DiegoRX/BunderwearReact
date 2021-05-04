@@ -24,10 +24,7 @@ function App() {
 
   // };
   // }, []);
-  useEffect(() => {
-    console.log('refreshed')
 
-  }, [data]);
 
 
     const init = async () => {
@@ -38,13 +35,15 @@ function App() {
       setData(accounts)
       // const name = await simpleStorage.methods.name().call()
       const name = await simpleStorage.name()
-      setName(name)
+      setName(accounts)
 
       console.log(20, simpleStorage)
-      console.log(name, 'data name')
+      console.log(name, accounts.join(), data, 'data ne')
 
     };
-
+useEffect(()=>{
+  console.log(data, 'dataaa')
+},setData)
 
   const rewardLiquidityProviders = async e => {
     e.preventDefault();
