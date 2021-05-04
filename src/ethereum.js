@@ -40,8 +40,10 @@ const getBlockchain = () =>
     const addresses = await web3Provider.eth.getAccounts()
     console.log(addresses)
       return;
+    }else if(!provider) {
+      alert('Install Metamask');
     }
-    reject('Install Metamask');
+    reject( alert('Install Metamask'));
   });
 
 export default getBlockchain;
