@@ -48829,14 +48829,169 @@
       "transactionHash": "0x286d3f7b406d183aca5b64cfccdc5160454fbb3d3560bf5a0297d5ee5e7d461a"
     },
     "5777": {
+      "events": {
+        "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        "0x5ad60a3809edf57c6c3e72fca26945b0cbce9e4a2d6aea167e35fc04c043bb9e": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "lpTokenAmount",
+              "type": "uint256"
+            }
+          ],
+          "name": "BurnLiquidity",
+          "type": "event"
+        },
+        "0x1ac88120e7cb0c1102895c679e94394ce3fb63f5fc8ff9519213798ec483fbc0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "tokenAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "ethAmount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LockLiquidity",
+          "type": "event"
+        },
+        "0x6ae172837ea30b801fbfcdd4108aa1d5bf8ff775444fd70256b44e6bf3dfc3f6": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "MinterAdded",
+          "type": "event"
+        },
+        "0xe94479a9f7e1952cc78f2d6baab678adc1b772d936c6583def489e524cb66692": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "MinterRemoved",
+          "type": "event"
+        },
+        "0x8765d2bb982ed6ee74d2b03c76c9c129aa4a4e3e6b17bd7cf7830088e9d49054": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "tokenAmount",
+              "type": "uint256"
+            }
+          ],
+          "name": "RewardLiquidityProviders",
+          "type": "event"
+        },
+        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        "0x22380c05984257a1cb900161c713dd71d39e74820f1aea43bd3f1bdd20961299": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "WhitelistAdminAdded",
+          "type": "event"
+        },
+        "0x0a8eb35e5ca14b3d6f28e4abf2f128dbab231a58b56e89beb5d636115001e165": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "WhitelistAdminRemoved",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x5b5CC0196215B5090AB8D36A7E03144c3a0b19Ce",
+      "transactionHash": "0x1409502bddca66e880e2b17f53c7c6f7376706f69824344125500adff25cc643"
+    },
+    "1620143637274": {
       "events": {},
       "links": {},
-      "address": "0xBB4192f3B441Be7873F275B0b58E9b7bc544aB7D",
-      "transactionHash": "0xcda0d878de765cad263d02f214623271f572ae950d9af9370069a3f0f37323ae"
+      "address": "0x0340C0d78277342D5dDDFBFe0370c50B02583E6f",
+      "transactionHash": "0xc0f1c610a59294f0f7d70b43d599dadb5f457d6e02ffe93fa1af54372b2e1e68"
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-24T21:55:41.259Z",
+  "updatedAt": "2021-05-04T15:54:30.411Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {

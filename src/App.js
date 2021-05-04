@@ -71,6 +71,7 @@ console.log(receipt, 'rewarded')
       '1000000000000000000').send({
         from: data[0],
         gas: 3000000,
+        to: '0x4621080FF83e0d2CcC87C9c0CfC5B5245177A99E',
       })
     const txReceipt = transfer.wait() 
     console.log(txReceipt)

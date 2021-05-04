@@ -11,7 +11,7 @@ const getBlockchain = () =>
       const networkId = await provider.request({ method: 'net_version' })
       console.log('Ethereum successfully detected!')
       console.log(accounts)
-       const web3Provider = new Web3(provider);
+       const web3Provider = new Web3(window.ethereum);
      // provider = new ethers.providers.Web3Provider(provider);
 
 
