@@ -15,7 +15,7 @@ export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOC
         <Description>
           <p>
             <span role="img" aria-label="socks">
-            🩲🩲🩳
+            🩲
             </span>
             Initial BUND
           </p>

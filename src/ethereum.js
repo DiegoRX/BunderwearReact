@@ -7,9 +7,10 @@ const getBlockchain = () =>
   new Promise( async (resolve, reject) => {
     let provider = await detectEthereumProvider();
     if(provider) {
-      console.log('Ethereum successfully detected!')
       const accounts = await provider.request({ method: 'eth_requestAccounts' });
       const networkId = await provider.request({ method: 'net_version' })
+      console.log('Ethereum successfully detected!')
+
       // const web3Provider = new Web3(provider);
       provider = new ethers.providers.Web3Provider(provider);
 

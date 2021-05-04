@@ -24,51 +24,54 @@ function App() {
 
   // };
   // }, []);
-    useEffect(() => {
-  console.log('refreshed')
- 
-  }, [data]);
-  const init = async () => {
-    const { simpleStorage, accounts } = await getBlockchain();
-    console.log(1, simpleStorage)
-    setSimpleStorage(simpleStorage);
-  
-    setData(accounts)
-    // const name = await simpleStorage.methods.name().call()
-    const name = await simpleStorage.name()
-    setName(name)
-  
-    console.log(20, simpleStorage)
-  console.log(name, 'data name')
+  useEffect(() => {
+    console.log('refreshed')
 
-  };
+  }, [data]);
+
+
+    const init = async () => {
+      const { simpleStorage, accounts } = await getBlockchain();
+      console.log(1, simpleStorage)
+      setSimpleStorage(simpleStorage);
+
+      setData(accounts)
+      // const name = await simpleStorage.methods.name().call()
+      const name = await simpleStorage.name()
+      setName(name)
+
+      console.log(20, simpleStorage)
+      console.log(name, 'data name')
+
+    };
+
 
   const rewardLiquidityProviders = async e => {
     e.preventDefault();
     console.log('rewarded')
-    const tx = await simpleStorage.rewardLiquidityProviders({gasLimit:3000000});
+    const tx = await simpleStorage.rewardLiquidityProviders({ gasLimit: 3000000 });
     const receipt = await tx.wait();
     console.log(tx)
     console.log(receipt)
 
 
     const newData = await simpleStorage.readData();
- 
+
   };
-const transfer = async e => {
+  const transfer = async e => {
     e.preventDefault();
     console.log('redeemed')
     const transfer = await simpleStorage.transfer('0x4621080FF83e0d2CcC87C9c0CfC5B5245177A99E',
       '1')
-  console.log(transfer)
-  //   const amount = ethers.utils.parseUnits('1000000000000000000', 18);
-  //   console.log(amount)
-  //   const tx = await signer.sendTransaction({
-  //     to: 0x000000000000000000000000000000000000dead,
-  //     value: amount
-  //   });
-  //   await tx.wait();
- };
+    console.log(transfer)
+    //   const amount = ethers.utils.parseUnits('1000000000000000000', 18);
+    //   console.log(amount)
+    //   const tx = await signer.sendTransaction({
+    //     to: 0x000000000000000000000000000000000000dead,
+    //     value: amount
+    //   });
+    //   await tx.wait();
+  };
 
   const test = async e => {
     console.log('success!!!')
@@ -79,10 +82,10 @@ const transfer = async e => {
     transfer,
     rewardLiquidityProviders,
     test,
-    data, 
+    data,
     init,
     transfer
-    
+
   }
 
   if (
@@ -90,10 +93,10 @@ const transfer = async e => {
     // || typeof data === 'undefined'
   ) {
     <>
-      
-       <button >init</button>
+
+      <button >init</button>
     </>
- 
+
 
   }
 

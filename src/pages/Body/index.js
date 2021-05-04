@@ -114,7 +114,7 @@ const {rewardLiquidityProviders, test, data, init} = useContext(Context);
       <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
         <Unicorn>
           <span role="img" aria-label="unicorn">
-          🩳
+          🩲
           </span>{' '}
           BUNDERWEAR
         </Unicorn>
@@ -123,7 +123,7 @@ const {rewardLiquidityProviders, test, data, init} = useContext(Context);
 
           <Link to="/stats" style={{ textDecoration: 'none' }}>
             <Burned>
-             Redeemed
+            ♥️ # Redeemed
             </Burned>            
           </Link>
           
@@ -278,10 +278,10 @@ export default function Body({}) {
       </Modal>
         <Card />{' '}
         <Info>
-          <div style={{ marginBottom: '4px' }}>Buy and sell real underwear with digital currency.</div>
+          <div style={{ marginBottom: '4px' }}>Buy and sell real BUNDERWEAR with digital currency.</div>
           <div style={{ marginBottom: '4px' }}>
             Delivered on demand.{' '}
-            <a
+            <a href='/'
 
               // onClick={e => {
               //   e.preventDefault()
