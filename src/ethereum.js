@@ -43,7 +43,7 @@ const getBlockchain = () =>
     }else if(!provider) {
       alert('Install Metamask');
     }
-    reject( alert('Install Metamask'));
+    reject('Install Metamask');
   });
 
 export default getBlockchain;
