@@ -10,7 +10,7 @@ const getBlockchain = () =>
       const accounts = await provider.request({ method: 'eth_requestAccounts' });
       const networkId = await provider.request({ method: 'net_version' })
       console.log('Ethereum successfully detected!')
-
+      console.log(accounts)
       // const web3Provider = new Web3(provider);
       provider = new ethers.providers.Web3Provider(provider);
 
@@ -29,12 +29,7 @@ const getBlockchain = () =>
       );     
       resolve({simpleStorage, accounts});
       
-      console.log(provider)
-      console.log(1, accounts)
-      console.log(networkId)
-      console.log(web3Provider)
-      console.log(simpleStorage)
-      console.log(networkId)
+     
       
 
 
