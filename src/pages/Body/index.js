@@ -201,7 +201,7 @@ const Burned = styled.div`
   color: red;
 `
 const Burned1 = styled.div`
-  background-color: red;
+  background: linear-gradient(to right, red, #d52941);
   border: 1px solid red;
   margin-right: 1rem;
   padding: 0.75rem;
@@ -375,7 +375,7 @@ const OrderStatusLink = styled.p`
 `
 
 const Unicorn = styled.p`
-  color: ${props => props.theme.uniswapPink};
+  color: black;
   font-weight: 600;
   margin: auto 0px;
   font-size: 16px;

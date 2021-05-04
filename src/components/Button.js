@@ -25,8 +25,8 @@ const ButtonFrame = styled.button`
   pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
   border-width: ${props => (props.type === 'cta' ? '0px' : props.disabled ? '0px' : '1px')};
   border-color: ${props => (props.type === 'cta' ? 'none' : props.disabled ? 'none' : props.theme.uniswapPink)};
-  background-color: ${props => (props.color === 'grey' ? '#EC8121' : '#EC8121')};;
-  // {props =>
+  background: linear-gradient(to right, #e85d04, #f48c06 );
+  // {props => e85d04  f48c06
   //   props.type === 'cta'
   //     ? props.disabled
   //       ? // ? 'linear-gradient(97.28deg, rgba(254, 109, 222, 0.2) 2.08%, rgba(255, 157, 234, 0.2) 106.51%)'

@@ -25,7 +25,7 @@ const ButtonFrame = styled.button`
   pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
   border-width: ${props => (props.type === 'cta' ? '0px' : props.disabled ? '0px' : '1px')};
   border-color: ${props => (props.type === 'cta' ? 'none' : props.disabled ? 'none' : props.theme.uniswapPink)};
-  background-color: grey;
+  background: linear-gradient(to right, #adb5bd, #adb5bd );
   // {props =>
   //   props.type === 'cta'
   //     ? props.disabled

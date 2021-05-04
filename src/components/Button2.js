@@ -25,10 +25,10 @@ const ButtonFrame2 = styled.button`
   pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
   border-width: ${props => (props.type === 'cta' ? '0px' : props.disabled ? '0px' : '1px')};
   border-color: ${props => (props.type === 'cta' ? 'none' : props.disabled ? 'none' : props.theme.uniswapPink)};
-  background-color: ${props => (props.color === 'red' ? 'red' : '#EC8121')};;
-  // {props =>
-  //   props.type === 'cta'
-  //     ? props.disabled
+  background: ${props => (props.color === 'red' ? 'linear-gradient(to right, #990d35, #d52941)' : 'linear-gradient(to right, #e85d04, #f48c06 );')};;
+  // {props =>  d52941 background: linear-gradient(to right, #e85d04, #f48c06 );
+  //   props.type === 'cta's
+  //     ? props.disabled   linear-gradient(to right, #d52941, #990d35)
   //       ? // ? 'linear-gradient(97.28deg, rgba(254, 109, 222, 0.2) 2.08%, rgba(255, 157, 234, 0.2) 106.51%)'
   //         '#f1f2f6'
   //       : 'lightskyblue'
