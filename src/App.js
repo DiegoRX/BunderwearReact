@@ -113,6 +113,10 @@ const transfer = async e => {
             window.location.href = 'https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x7acCa1BBA77bF389680EC9A3d24816FAbBA3E41b';
             return null;
           }} />
+          <Route path='/contact' component={() => {
+            window.location.href = 'https://contact@bunderwear.club';
+            return null;
+          }} />
           <Route path='/GetLPTokens' component={() => {
             window.location.href = 'https://v1exchange.pancakeswap.finance/#/swap?inputCurrency=0x7acCa1BBA77bF389680EC9A3d24816FAbBA3E41b';
             return null;

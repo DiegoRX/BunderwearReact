@@ -12,8 +12,8 @@ export default function Card({ totalSupply, dollarPrice, reserveSOCKSToken }) {
       options={{ scale: 1.01, max: 10, glare: true, 'max-glare': 1, speed: 1000 }}
     >
       <CardWrapper>
-        <Title>Bunderwear Genesis</Title>
-        <SubTitle>Bunderwear</SubTitle>
+        <Title>BUNDERWEAR GENESIS</Title>
+        <SubTitle>BUNDERWEAR</SubTitle>
         <Gallery />
         <MarketData>
           <span>

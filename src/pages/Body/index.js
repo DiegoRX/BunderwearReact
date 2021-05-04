@@ -268,7 +268,7 @@ export default function Body({}) {
         <Modal.Body>You can sell the token back at any time. To get a real pair, redeem a BUND token.</Modal.Body>
         <Modal.Body> How it's priced:</Modal.Body>
         <Modal.Body> BUND tokens are listed starting at $2.75 USD. Each buy/sell will move the price, however floor will keep increasing with each TX.</Modal.Body>
-        <Modal.Body> Get in touch (aca que envie correo a contact@bunderwear.club)</Modal.Body>
+        <Modal.Body> <a href='mailto:contact@bunderwear.club'>Get in touch</a></Modal.Body>
 
        
 
