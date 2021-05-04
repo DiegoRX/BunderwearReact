@@ -106,14 +106,7 @@ const [tester, setTester] = useState(null);
 
 const {rewardLiquidityProviders, test, data, init} = useContext(Context);
 
-function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
-    setInterval(() => {
-      console.log(data, 7)
-    }, 2000);
-  });
-}
-resolveAfter2Seconds()
+
   const dataSliced = data
   return (
     <HeaderFrame

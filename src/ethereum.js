@@ -11,30 +11,33 @@ const getBlockchain = () =>
       const networkId = await provider.request({ method: 'net_version' })
       console.log('Ethereum successfully detected!')
       console.log(accounts)
-      // const web3Provider = new Web3(provider);
-      provider = new ethers.providers.Web3Provider(provider);
+       const web3Provider = new Web3(provider);
+     // provider = new ethers.providers.Web3Provider(provider);
 
 
-      // const deployedNetwork = BUNDERWEAR.networks['97'].address
-      // const ABI = BUNDERWEAR.abi
-      // const simpleStorage = new web3Provider.eth.Contract(
-      //   ABI,
-      //   deployedNetwork
-      // )
-      const signer = provider.getSigner();
-      const simpleStorage = new Contract(
-        BUNDERWEAR.networks[networkId].address,
-        BUNDERWEAR.abi,
-        signer
-      );     
-      resolve({simpleStorage, accounts});
+      const deployedNetwork = BUNDERWEAR.networks[networkId].address
+      const ABI = BUNDERWEAR.abi
+      const simpleStorage = new web3Provider.eth.Contract(
+        ABI,
+        deployedNetwork
+      )
+      // const signer = provider.getSigner();
+      
+      // const simpleStorage = new Contract(
+      //   BUNDERWEAR.networks[networkId].address,
+      //   BUNDERWEAR.abi,
+      //   signer
+      // );  
+      const addresses = await web3Provider.eth.getAccounts() 
+        console.log(addresses, simpleStorage, ABI, deployedNetwork, networkId)
+      resolve({simpleStorage, accounts, addresses});
       
      
       
 
 
-    const addresses = await web3Provider.eth.getAccounts()
-    console.log(addresses)
+    
+    
       return;
     }else if(!provider) {
       alert('Install Metamask');

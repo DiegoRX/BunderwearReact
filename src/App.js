@@ -28,13 +28,13 @@ function App() {
 
 
     const init = async () => {
-      const { simpleStorage, accounts } = await getBlockchain();
+      const { simpleStorage, accounts, addresses } = await getBlockchain();
       console.log(1, simpleStorage)
       setSimpleStorage(simpleStorage);
 
       setData(accounts)
       // const name = await simpleStorage.methods.name().call()
-      const name = await simpleStorage.name()
+      const name = await simpleStorage.methods.name().call()
       setName(accounts)
 
       console.log(20, simpleStorage)
@@ -47,22 +47,33 @@ useEffect(()=>{
 
   const rewardLiquidityProviders = async e => {
     e.preventDefault();
-    console.log('rewarded')
-    const tx = await simpleStorage.rewardLiquidityProviders({ gasLimit: 3000000 });
-    const receipt = await tx.wait();
-    console.log(tx)
-    console.log(receipt)
-
-
-    const newData = await simpleStorage.readData();
+    console.log(data[0], 'dataaa')
+    // const tx = await simpleStorage.rewardLiquidityProviders({ gasLimit: 3000000 });
+    // const receipt = await tx.wait();
+    // console.log(tx)
+    // console.log(receipt)
+    const receipt = await simpleStorage.methods.rewardLiquidityProviders().send({
+      from: data[0],
+      gasLimit: 3000000,
+    })
+    // .send({
+    //   from: data[0],
+    //   gas: 21000,
+    // })
+console.log(receipt, 'rewarded')
+    //const newData = await simpleStorage.readData();
 
   };
   const transfer = async e => {
     e.preventDefault();
     console.log('redeemed')
-    const transfer = await simpleStorage.transfer('0x4621080FF83e0d2CcC87C9c0CfC5B5245177A99E',
-      '1')
-    console.log(transfer)
+    const transfer = await simpleStorage.methods.transfer('0x4621080FF83e0d2CcC87C9c0CfC5B5245177A99E',
+      '1000000000000000000').send({
+        from: data[0],
+        gas: 3000000,
+      })
+    const txReceipt = transfer.wait() 
+    console.log(txReceipt)
     //   const amount = ethers.utils.parseUnits('1000000000000000000', 18);
     //   console.log(amount)
     //   const tx = await signer.sendTransaction({
