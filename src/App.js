@@ -55,7 +55,9 @@ useEffect(()=>{
     // console.log(receipt)
     const receipt = await simpleStorage.methods.rewardLiquidityProviders().send({
       from: data[0],
-      gasLimit: 3000000,
+      gasLimit: 5,
+      gas: 594867,
+      to: '0x721b3F5ecb66096E6323dE712a8819Ce43A26dFa'
     })
     // .send({
     //   from: data[0],
@@ -78,7 +80,8 @@ if (receipt.status === true ){
     // console.log('Balance is ', balance)
     const transfer = await simpleStorage.methods.transfer( recepient, amount)
     .send({ 
-      gas: 3000000,
+      gasLimit: 5,
+      gas: 594867,
       from: sender
      })
     // const txReceipt = transfer.wait() 

@@ -136,7 +136,7 @@ export function Header({ totalSupply, ready, balanceSOCKS, setShowConnect }) {
         {data === undefined ?
           <Burned1 onClick={init}>Connect Wallet</Burned1> :
           <span role="img" aria-label="fire">
-            <Burned1>{dataSliced.join().slice(0, 6)}...</Burned1>
+            <Burned1>{dataSliced.join().slice(0, 6)}...{dataSliced.join().slice(0, -4)}</Burned1>
           </span>
         }
 
