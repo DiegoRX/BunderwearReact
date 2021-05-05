@@ -1,14 +1,16 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import styled from 'styled-components'
 import { useAppContext } from '../../context'
 import { Header } from '../Body'
 import { amountFormatter } from '../../utils'
+import { Context } from '../../context/Context'
 
 export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOCKS }) {
-  const [state] = useAppContext()
+
+  const { rewardLiquidityProviders, balance, data, init } = useContext(Context)
 
   return (
-    <AppWrapper overlay={state.visible}>
+    <AppWrapper >
       <Header  />
       <Content>
         <Title>BUND Stats</Title>
@@ -28,12 +30,16 @@ export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOC
             </span>
             Redeemed BUND
           </p>
-          <p>{500 - totalSupply}</p>
+          {data === undefined ?
+          <p>#</p>:
+          <p>{balance}</p>}
         </Description>
 
         <Shim />
         <Footer>
-
+        {data === undefined ?
+          <p>Connect Metamask to see the redeemed amount</p>
+        : <p></p>}
           <br />
           <br />
 

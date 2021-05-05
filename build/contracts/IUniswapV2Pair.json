@@ -138,7 +138,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1756,
+                      "referencedDeclaration": 1926,
                       "src": "1164:3:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -232,7 +232,7 @@
                     "name": "this",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1770,
+                    "referencedDeclaration": 1940,
                     "src": "1254:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_contract$_Context_$26",
@@ -252,7 +252,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1756,
+                      "referencedDeclaration": 1926,
                       "src": "1394:3:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -739,10 +739,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "1988:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2573,10 +2573,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "6572:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -3021,10 +3021,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "7471:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -3571,10 +3571,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "8170:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -4024,10 +4024,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "9523:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -4584,10 +4584,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "10871:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -7061,10 +7061,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "16061:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -7215,10 +7215,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "16141:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -7897,10 +7897,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "16773:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -8519,10 +8519,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "17394:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -9163,10 +9163,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "18179:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -9317,10 +9317,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "18257:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -10637,10 +10637,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "19913:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -10952,10 +10952,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "20166:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -11289,10 +11289,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "20452:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -11896,10 +11896,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "20961:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -14064,7 +14064,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1790,
+                            "referencedDeclaration": 1960,
                             "src": "24647:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -14188,7 +14188,7 @@
                               "name": "super",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1791,
+                              "referencedDeclaration": 1961,
                               "src": "24912:5:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_super$_ERC20TransferLiquidityLock_$1569",
@@ -14364,7 +14364,7 @@
                                   "name": "this",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1790,
+                                  "referencedDeclaration": 1960,
                                   "src": "24774:4:0",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -14441,7 +14441,7 @@
                               "name": "super",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1791,
+                              "referencedDeclaration": 1961,
                               "src": "24744:5:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_super$_ERC20TransferLiquidityLock_$1569",
@@ -14597,7 +14597,7 @@
                               "name": "super",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1791,
+                              "referencedDeclaration": 1961,
                               "src": "24815:5:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_super$_ERC20TransferLiquidityLock_$1569",
@@ -14827,7 +14827,7 @@
                                   "name": "this",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1790,
+                                  "referencedDeclaration": 1960,
                                   "src": "25217:4:0",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -14942,10 +14942,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "25172:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -15058,10 +15058,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "25321:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -15777,7 +15777,7 @@
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1790,
+                          "referencedDeclaration": 1960,
                           "src": "26179:4:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -15958,7 +15958,7 @@
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1790,
+                              "referencedDeclaration": 1960,
                               "src": "26278:4:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -16263,7 +16263,7 @@
                                 "name": "this",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1790,
+                                "referencedDeclaration": 1960,
                                 "src": "26739:4:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -16421,7 +16421,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1790,
+                            "referencedDeclaration": 1960,
                             "src": "26920:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -16511,7 +16511,7 @@
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1791,
+                        "referencedDeclaration": 1961,
                         "src": "26896:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_super$_ERC20TransferLiquidityLock_$1569",
@@ -16796,7 +16796,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1790,
+                            "referencedDeclaration": 1960,
                             "src": "27176:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -17014,10 +17014,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "27192:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -17481,7 +17481,7 @@
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1790,
+                          "referencedDeclaration": 1960,
                           "src": "27548:4:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -17693,7 +17693,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1790,
+                            "referencedDeclaration": 1960,
                             "src": "27654:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -17863,7 +17863,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1790,
+                            "referencedDeclaration": 1960,
                             "src": "27907:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -17913,7 +17913,7 @@
                           "name": "block",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1746,
+                          "referencedDeclaration": 1916,
                           "src": "27930:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_block",
@@ -18112,7 +18112,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1790,
+                            "referencedDeclaration": 1960,
                             "src": "28069:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -18238,7 +18238,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1790,
+                            "referencedDeclaration": 1960,
                             "src": "28236:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -18338,7 +18338,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1790,
+                            "referencedDeclaration": 1960,
                             "src": "28334:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -18388,7 +18388,7 @@
                           "name": "block",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1746,
+                          "referencedDeclaration": 1916,
                           "src": "28357:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_block",
@@ -18669,7 +18669,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1790,
+                            "referencedDeclaration": 1960,
                             "src": "28520:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -20150,7 +20150,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1790,
+                            "referencedDeclaration": 1960,
                             "src": "29635:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_ERC20TransferLiquidityLock_$1569",
@@ -21594,10 +21594,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "30930:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -21875,10 +21875,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1759,
-                        1760
+                        1929,
+                        1930
                       ],
-                      "referencedDeclaration": 1760,
+                      "referencedDeclaration": 1930,
                       "src": "31158:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -22178,10 +22178,10 @@
                             "name": "require",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [
-                              1759,
-                              1760
+                              1929,
+                              1930
                             ],
-                            "referencedDeclaration": 1760,
+                            "referencedDeclaration": 1930,
                             "src": "31438:7:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -22641,10 +22641,10 @@
                             "name": "require",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [
-                              1759,
-                              1760
+                              1929,
+                              1930
                             ],
-                            "referencedDeclaration": 1760,
+                            "referencedDeclaration": 1930,
                             "src": "31905:7:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -23138,7 +23138,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1756,
+                              "referencedDeclaration": 1926,
                               "type": "msg",
                               "value": "msg"
                             },
@@ -23236,7 +23236,7 @@
                           "overloadedDeclarations": [
                             null
                           ],
-                          "referencedDeclaration": 1770,
+                          "referencedDeclaration": 1940,
                           "type": "contract Context",
                           "value": "this"
                         },
@@ -23272,7 +23272,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1756,
+                              "referencedDeclaration": 1926,
                               "type": "msg",
                               "value": "msg"
                             },
@@ -23691,10 +23691,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -25851,10 +25851,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -26360,10 +26360,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -26884,10 +26884,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -27427,10 +27427,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -28022,10 +28022,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -30668,10 +30668,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -30826,10 +30826,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -31530,10 +31530,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -32197,10 +32197,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -32912,10 +32912,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -33070,10 +33070,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -34518,10 +34518,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -34875,10 +34875,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -35237,10 +35237,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -35836,10 +35836,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -38475,7 +38475,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 1790,
+                                      "referencedDeclaration": 1960,
                                       "type": "contract ERC20TransferLiquidityLock",
                                       "value": "this"
                                     },
@@ -38656,7 +38656,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 1791,
+                                          "referencedDeclaration": 1961,
                                           "type": "contract super ERC20TransferLiquidityLock",
                                           "value": "super"
                                         },
@@ -38723,7 +38723,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 1790,
+                                          "referencedDeclaration": 1960,
                                           "type": "contract ERC20TransferLiquidityLock",
                                           "value": "this"
                                         },
@@ -38808,7 +38808,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 1791,
+                                          "referencedDeclaration": 1961,
                                           "type": "contract super ERC20TransferLiquidityLock",
                                           "value": "super"
                                         },
@@ -38984,7 +38984,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 1791,
+                                          "referencedDeclaration": 1961,
                                           "type": "contract super ERC20TransferLiquidityLock",
                                           "value": "super"
                                         },
@@ -39215,10 +39215,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -39329,7 +39329,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 1790,
+                                          "referencedDeclaration": 1960,
                                           "type": "contract ERC20TransferLiquidityLock",
                                           "value": "this"
                                         },
@@ -39409,10 +39409,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -40282,7 +40282,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1790,
+                                  "referencedDeclaration": 1960,
                                   "type": "contract ERC20TransferLiquidityLock",
                                   "value": "this"
                                 },
@@ -40482,7 +40482,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 1790,
+                                          "referencedDeclaration": 1960,
                                           "type": "contract ERC20TransferLiquidityLock",
                                           "value": "this"
                                         },
@@ -40845,7 +40845,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 1790,
+                                      "referencedDeclaration": 1960,
                                       "type": "contract ERC20TransferLiquidityLock",
                                       "value": "this"
                                     },
@@ -40993,7 +40993,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1791,
+                                  "referencedDeclaration": 1961,
                                   "type": "contract super ERC20TransferLiquidityLock",
                                   "value": "super"
                                 },
@@ -41046,7 +41046,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1790,
+                                  "referencedDeclaration": 1960,
                                   "type": "contract ERC20TransferLiquidityLock",
                                   "value": "this"
                                 },
@@ -41472,7 +41472,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1790,
+                                  "referencedDeclaration": 1960,
                                   "type": "contract ERC20TransferLiquidityLock",
                                   "value": "this"
                                 },
@@ -41525,10 +41525,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -42148,7 +42148,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1790,
+                                  "referencedDeclaration": 1960,
                                   "type": "contract ERC20TransferLiquidityLock",
                                   "value": "this"
                                 },
@@ -42419,7 +42419,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1790,
+                                  "referencedDeclaration": 1960,
                                   "type": "contract ERC20TransferLiquidityLock",
                                   "value": "this"
                                 },
@@ -42663,7 +42663,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1790,
+                                  "referencedDeclaration": 1960,
                                   "type": "contract ERC20TransferLiquidityLock",
                                   "value": "this"
                                 },
@@ -42694,7 +42694,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1746,
+                                  "referencedDeclaration": 1916,
                                   "type": "block",
                                   "value": "block"
                                 },
@@ -42899,7 +42899,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1790,
+                                  "referencedDeclaration": 1960,
                                   "type": "contract ERC20TransferLiquidityLock",
                                   "value": "this"
                                 },
@@ -43158,7 +43158,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1790,
+                                  "referencedDeclaration": 1960,
                                   "type": "contract ERC20TransferLiquidityLock",
                                   "value": "this"
                                 },
@@ -43259,7 +43259,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1790,
+                                  "referencedDeclaration": 1960,
                                   "type": "contract ERC20TransferLiquidityLock",
                                   "value": "this"
                                 },
@@ -43290,7 +43290,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1746,
+                                  "referencedDeclaration": 1916,
                                   "type": "block",
                                   "value": "block"
                                 },
@@ -43464,7 +43464,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1790,
+                                  "referencedDeclaration": 1960,
                                   "type": "contract ERC20TransferLiquidityLock",
                                   "value": "this"
                                 },
@@ -45156,7 +45156,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1790,
+                                  "referencedDeclaration": 1960,
                                   "type": "contract ERC20TransferLiquidityLock",
                                   "value": "this"
                                 },
@@ -46561,10 +46561,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -46864,10 +46864,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                1759,
-                                1760
+                                1929,
+                                1930
                               ],
-                              "referencedDeclaration": 1760,
+                              "referencedDeclaration": 1930,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -47224,10 +47224,10 @@
                                         }
                                       ],
                                       "overloadedDeclarations": [
-                                        1759,
-                                        1760
+                                        1929,
+                                        1930
                                       ],
-                                      "referencedDeclaration": 1760,
+                                      "referencedDeclaration": 1930,
                                       "type": "function (bool,string memory) pure",
                                       "value": "require"
                                     },
@@ -47771,10 +47771,10 @@
                                         }
                                       ],
                                       "overloadedDeclarations": [
-                                        1759,
-                                        1760
+                                        1929,
+                                        1930
                                       ],
-                                      "referencedDeclaration": 1760,
+                                      "referencedDeclaration": 1930,
                                       "type": "function (bool,string memory) pure",
                                       "value": "require"
                                     },
@@ -48044,7 +48044,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-24T21:55:41.850Z",
+  "updatedAt": "2021-05-05T16:16:14.884Z",
   "devdoc": {
     "methods": {}
   },

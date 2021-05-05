@@ -11,6 +11,7 @@ function App() {
   const [simpleStorage, setSimpleStorage] = useState(undefined);
   const [data, setData] = useState(undefined);
   const [name, setName] = useState(undefined);
+  const [balance, setBalance] = useState(undefined);
 
   // useEffect(() => {
   // const init = async () => {
@@ -28,7 +29,7 @@ function App() {
 
 
     const init = async () => {
-      const { simpleStorage, accounts, addresses } = await getBlockchain();
+      const { simpleStorage, accounts, addresses, balance } = await getBlockchain();
       console.log(1, simpleStorage)
       setSimpleStorage(simpleStorage);
 
@@ -36,7 +37,7 @@ function App() {
       // const name = await simpleStorage.methods.name().call()
       const name = await simpleStorage.methods.name().call()
       setName(accounts)
-
+      setBalance(balance)
       console.log(20, simpleStorage)
       console.log(name, accounts.join(), data, 'data ne')
 
@@ -67,14 +68,19 @@ console.log(receipt, 'rewarded')
   const transfer = async e => {
     e.preventDefault();
     console.log('redeemed')
-    const transfer = await simpleStorage.methods.transfer('0x4621080FF83e0d2CcC87C9c0CfC5B5245177A99E',
-      '1000000000000000000').send({
-        from: data[0],
-        gas: 3000000,
-        to: '0x4621080FF83e0d2CcC87C9c0CfC5B5245177A99E',
-      })
-    const txReceipt = transfer.wait() 
-    console.log(txReceipt)
+    const recepient = '0x4621080FF83e0d2CcC87C9c0CfC5B5245177A99E'
+    const amount = '1000000000000000000'
+    const sender = data[0]
+    
+    // const balance = await simpleStorage.methods.balanceOf(recepient).call()
+    // console.log('Balance is ', balance)
+    const transfer = await simpleStorage.methods.transfer( recepient, amount)
+    .send({ 
+      gas: 3000000,
+      from: sender
+     })
+    // const txReceipt = transfer.wait() 
+    console.log(transfer)
     //   const amount = ethers.utils.parseUnits('1000000000000000000', 18);
     //   console.log(amount)
     //   const tx = await signer.sendTransaction({
@@ -95,7 +101,8 @@ console.log(receipt, 'rewarded')
     test,
     data,
     init,
-    transfer
+    transfer,
+    balance
 
   }
 

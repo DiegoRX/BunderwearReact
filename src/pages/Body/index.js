@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { useWeb3Context } from 'web3-react'
 import { Link } from 'react-router-dom'
 // import BUNDERWEAR from '../../../../build/contracts/BUNDERWEAR.json';
-import {Context} from '../../context/Context';
-import {ethers, Signer} from 'ethers'
+import { Context } from '../../context/Context';
+import { ethers, Signer } from 'ethers'
 import Modal from 'react-bootstrap/Modal';
 import { useAppContext } from '../../context'
 import Card from '../../components/Card'
@@ -17,96 +17,96 @@ import getBlockchain from '../../ethereum.js';
 
 
 export function Header({ totalSupply, ready, balanceSOCKS, setShowConnect }) {
-//   const context = useWeb3Context()
-//   const { account, setConnector, library} = useWeb3Context()
+  //   const context = useWeb3Context()
+  //   const { account, setConnector, library} = useWeb3Context()
 
-// //   console.log(context)
-// function handleAccount() {
-//   setConnector('Metamask', { suppressAndThrowErrors: true }).catch(error => {
-//     setShowConnect(true)
-//   })
-// }
-// handleAccount()
-// console.log(context)
+  // //   console.log(context)
+  // function handleAccount() {
+  //   setConnector('Metamask', { suppressAndThrowErrors: true }).catch(error => {
+  //     setShowConnect(true)
+  //   })
+  // }
+  // handleAccount()
+  // console.log(context)
 
-//   const CONTRACT_ADDRESS = BUNDERWEAR.networks['5777'].address;
-//   const provider = new ethers.providers.JsonRpcProvider('https://data-seed-prebsc-1-s1.binance.org:8545/')
+  //   const CONTRACT_ADDRESS = BUNDERWEAR.networks['5777'].address;
+  //   const provider = new ethers.providers.JsonRpcProvider('https://data-seed-prebsc-1-s1.binance.org:8545/')
 
-//   console.log(CONTRACT_ADDRESS)
-//   console.log(10,account, 10)
-//   console.log(provider)
+  //   console.log(CONTRACT_ADDRESS)
+  //   console.log(10,account, 10)
+  //   console.log(provider)
 
-//   function sign() {
-//     const timestampToSign = Math.round(Date.now() / 1000)
-//     const signer = library.getSigner()
-//     const message = `This signature is proof that I control the private key of ${account} as of the timestamp ${timestampToSign}.\n\n It will be used to access my Unisocks order history.`
-//     signer.signMessage(message).then(returnedSignature => {
-//       // setTimestamp(timestampToSign)
-//       // setSignature(returnedSignature)
-//       console.log(message)
-//     })
-//     console.log(message)
-//   }
-//   sign()
+  //   function sign() {
+  //     const timestampToSign = Math.round(Date.now() / 1000)
+  //     const signer = library.getSigner()
+  //     const message = `This signature is proof that I control the private key of ${account} as of the timestamp ${timestampToSign}.\n\n It will be used to access my Unisocks order history.`
+  //     signer.signMessage(message).then(returnedSignature => {
+  //       // setTimestamp(timestampToSign)
+  //       // setSignature(returnedSignature)
+  //       console.log(message)
+  //     })
+  //     console.log(message)
+  //   }
+  //   sign()
 
-//  async function init1() {
-//   const ABI = [
-//     'function name() public view returns (string memory) ',
-//     'function transfer(address recipient, uint256 amount) external returns (bool) '
-//   ]
+  //  async function init1() {
+  //   const ABI = [
+  //     'function name() public view returns (string memory) ',
+  //     'function transfer(address recipient, uint256 amount) external returns (bool) '
+  //   ]
 
-// const contracts = new ethers.Contract(CONTRACT_ADDRESS, ABI, provider)
-// console.log(5, contracts)
-// let name1 = await contracts.name()
-// // .catch(err => {
-// //   console.log(err.toString());
-// //   provider.getBlockNumber().then(console.log)
-// // });
-// console.log(1,name1)
+  // const contracts = new ethers.Contract(CONTRACT_ADDRESS, ABI, provider)
+  // console.log(5, contracts)
+  // let name1 = await contracts.name()
+  // // .catch(err => {
+  // //   console.log(err.toString());
+  // //   provider.getBlockNumber().then(console.log)
+  // // });
+  // console.log(1,name1)
 
-//   const signer = library.getSigner()
+  //   const signer = library.getSigner()
 
-//   console.log(library)
-//   const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
-//   txResponse = await contract.transfer({
-//     recepient: '0x000000000000000000000000000000000000dead',
-//     value: 1000000
-//   }).catch(err => {
-//   console.log(err.toString());
-//   provider.getBlockNumber().then(console.log)
-// });;
-//   txReceipt = await txResponse.wait();
-//   console.log(txReceipt)
-// }
-// init1()
-//  const init = async () => {
-//    const { simpleStorage, accounts } = await getBlockchain();
-//    console.log(1, simpleStorage)
-//    setSimpleStorage(simpleStorage);
+  //   console.log(library)
+  //   const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
+  //   txResponse = await contract.transfer({
+  //     recepient: '0x000000000000000000000000000000000000dead',
+  //     value: 1000000
+  //   }).catch(err => {
+  //   console.log(err.toString());
+  //   provider.getBlockNumber().then(console.log)
+  // });;
+  //   txReceipt = await txResponse.wait();
+  //   console.log(txReceipt)
+  // }
+  // init1()
+  //  const init = async () => {
+  //    const { simpleStorage, accounts } = await getBlockchain();
+  //    console.log(1, simpleStorage)
+  //    setSimpleStorage(simpleStorage);
 
 
-//  console.log(20, simpleStorage)
-//  console.log(data, 'data pues')
-//  };
-//  useEffect(() => {
-//  const init = async () => {
+  //  console.log(20, simpleStorage)
+  //  console.log(data, 'data pues')
+  //  };
+  //  useEffect(() => {
+  //  const init = async () => {
+
+  //    const { simpleStorage, accounts } = await getBlockchain();
+  //    console.log(1, simpleStorage)
+  //    setSimpleStorage(simpleStorage);
+
+
+  //  console.log(20, simpleStorage)
+  //  console.log(data, 'data pues')
+  //  };
+  //  }, []);
+  const [tester, setTester] = useState(null);
+
+
+  const [showBalance, setShowBalance] = useState(undefined);
+
+  const { rewardLiquidityProviders, balance, data, init } = useContext(Context);
   
-//    const { simpleStorage, accounts } = await getBlockchain();
-//    console.log(1, simpleStorage)
-//    setSimpleStorage(simpleStorage);
-
-
-//  console.log(20, simpleStorage)
-//  console.log(data, 'data pues')
-//  };
-//  }, []);
-const [tester, setTester] = useState(null);
-
-
-
-const {rewardLiquidityProviders, test, data, init} = useContext(Context);
-
-
   const dataSliced = data
   return (
     <HeaderFrame
@@ -115,28 +115,33 @@ const {rewardLiquidityProviders, test, data, init} = useContext(Context);
       <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
         <Unicorn>
           <span role="img" aria-label="unicorn">
-          🩲
+            🩲
           </span>{' '}
           BUNDERWEAR
         </Unicorn>
       </Link>
       <div style={{ display: 'flex', flexDirection: 'row' }}>
-
+        {data === undefined ?
           <Link to="/stats" style={{ textDecoration: 'none' }}>
             <Burned>
-            ♥️ # Redeemed
-            </Burned>            
+              ♥️ # Redeemed
+            </Burned>
+          </Link> :
+          <Link to="/stats" style={{ textDecoration: 'none' }}>
+            <Burned>
+              ♥️ {balance} Redeemed
+            </Burned>
           </Link>
-          
-              { data === undefined ?
-              <Burned1 onClick={init}>Connect Wallet</Burned1>:
-              <span role="img" aria-label="fire">
-              <Burned1>{dataSliced.join().slice(0,6)}...</Burned1>
-              </span>              
-              }
+        }
+        {data === undefined ?
+          <Burned1 onClick={init}>Connect Wallet</Burned1> :
+          <span role="img" aria-label="fire">
+            <Burned1>{dataSliced.join().slice(0, 6)}...</Burned1>
+          </span>
+        }
 
-              {/* {500 - totalSupply} <HideMobile>redeemed</HideMobile> */}
-             
+        {/* {500 - totalSupply} <HideMobile>redeemed</HideMobile> */}
+
 
         {/* <Account onClick={() => handleAccount()} balanceSOCKS={balanceSOCKS}>
           {account ?  (
@@ -248,7 +253,7 @@ const Status = styled.div`
   // props.account === null ? props.theme.orange : props.theme.green};
 `
 
-export default function Body({}) {
+export default function Body({ }) {
   const { account } = useWeb3Context()
 
   const [state, setState] = useAppContext()
@@ -261,22 +266,22 @@ export default function Body({}) {
       <Header
       />
       <Content>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>How it works:</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>BUND is a token that entitles you to 1 real pair of limited edition bunderwear, shipped anywhere in the world.</Modal.Body>
-        <Modal.Body>You can sell the token back at any time. To get a real pair, redeem a BUND token.</Modal.Body>
-        <Modal.Body> How it's priced:</Modal.Body>
-        <Modal.Body> BUND tokens are listed starting at $2.75 USD. Each buy/sell will move the price, however floor will keep increasing with each TX.</Modal.Body>
-        <Modal.Body> <a href='mailto:contact@bunderwear.club'>Get in touch</a></Modal.Body>
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>How it works:</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>BUND is a token that entitles you to 1 real pair of limited edition bunderwear, shipped anywhere in the world.</Modal.Body>
+          <Modal.Body>You can sell the token back at any time. To get a real pair, redeem a BUND token.</Modal.Body>
+          <Modal.Body> How it's priced:</Modal.Body>
+          <Modal.Body> BUND tokens are listed starting at $2.75 USD. Each buy/sell will move the price, however floor will keep increasing with each TX.</Modal.Body>
+          <Modal.Body> <a href='mailto:contact@bunderwear.club'>Get in touch</a></Modal.Body>
 
-       
 
-        <Modal.Footer>
 
-        </Modal.Footer>
-      </Modal>
+          <Modal.Footer>
+
+          </Modal.Footer>
+        </Modal>
         <Card />{' '}
         <Info>
           <div style={{ marginBottom: '4px' }}>Buy and sell real BUNDERWEAR with digital currency.</div>
@@ -309,14 +314,14 @@ export default function Body({}) {
           </SubInfo> */}
         </Info>
         <BuyButtons />
-        <RedeemButton  />
+        <RedeemButton />
         {!!account && (
           <Link style={{ textDecoration: 'none' }} to="/status">
             <OrderStatusLink>Check order status?</OrderStatusLink>
           </Link>
         )}
       </Content>
-     
+
 
       <Checkout
       />

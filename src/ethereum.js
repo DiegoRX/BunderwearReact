@@ -28,9 +28,13 @@ const getBlockchain = () =>
       //   BUNDERWEAR.abi,
       //   signer
       // );  
+      const recepient = '0x4621080FF83e0d2CcC87C9c0CfC5B5245177A99E'
+
+      const balance = await simpleStorage.methods.balanceOf(recepient).call()
+      console.log('Balance is ', balance)
       const addresses = await web3Provider.eth.getAccounts() 
-        console.log(addresses, simpleStorage, ABI, deployedNetwork, networkId)
-      resolve({simpleStorage, accounts, addresses});
+        console.log(addresses, simpleStorage, ABI, deployedNetwork, networkId, balance)
+      resolve({simpleStorage, accounts, addresses, balance});
       
      
       
