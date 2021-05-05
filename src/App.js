@@ -63,7 +63,9 @@ useEffect(()=>{
     // })
 console.log(receipt, 'rewarded')
     //const newData = await simpleStorage.readData();
-
+if (receipt.status === true ){
+  alert('Lo lograste!')
+}
   };
   const transfer = async e => {
     e.preventDefault();
