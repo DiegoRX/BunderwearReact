@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Main from './pages/Main';
 import Form from './pages/Form/index.js';
 import { Context } from './context/Context';
+import Swal from 'sweetalert2';
 
 function App() {
   const [signer, setSigner] = useState(undefined);
@@ -64,16 +65,20 @@ function App() {
     //   from: data[0],
     //   gas: 21000,
     // })
-// console.log(receipt, 'rewarded')
+console.log(receipt, 'rewarded')
 // setTxReceipt(receipt)
     //const newData = await simpleStorage.readData();
 if (receipt.status === true ){
-  alert('Lo lograste!')
+  Swal.fire(
+    'LP rewarded successfully',
+    '',
+    'success'
+  )
 }
   };
   const transfer = async e => {
     e.preventDefault();
-    console.log('redeemed')
+    
     const recepient = '0x4621080FF83e0d2CcC87C9c0CfC5B5245177A99E'
     const amount = '1000000000000000000'
     const sender = data[0]
@@ -87,10 +92,11 @@ if (receipt.status === true ){
       from: sender
      })
     // const txReceipt = transfer.wait() 
-    console.log(transfer)
+    // console.log(transfer)
     if (transfer.status === true ){
       // console.log("Aquí sí")
       setTxReceipt(transfer)
+      console.log('redeemed')
     }
     //   const amount = ethers.utils.parseUnits('1000000000000000000', 18);
     //   console.log(amount)
