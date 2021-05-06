@@ -6,12 +6,13 @@ import Swal from 'sweetalert2';
 // import './ContactUs.css';
 
 export default function ContactUs() {
-    const { txReceipt } = useContext(Context);
+    const { txReceipt, setTxReceipt } = useContext(Context);
     function sendEmail(e) {
         e.preventDefault();
 
         emailjs.sendForm('service_itwmv9a', 'template_340js25', e.target, 'user_8zFzNE9ZjccAbkpre5yQP')
             .then((result) => {
+                setTxReceipt(undefined)
                 Swal.fire(
                     'BUNDERWEAR REDEEMED',
                     'Please, allow 4 to 5 weeks for delivery',

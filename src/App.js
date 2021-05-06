@@ -65,10 +65,11 @@ function App() {
     //   from: data[0],
     //   gas: 21000,
     // })
-console.log(receipt, 'rewarded')
+// console.log(receipt, 'rewarded')
 // setTxReceipt(receipt)
     //const newData = await simpleStorage.readData();
 if (receipt.status === true ){
+
   Swal.fire(
     'LP rewarded successfully',
     '',
@@ -82,7 +83,7 @@ if (receipt.status === true ){
     const recepient = '0x4621080FF83e0d2CcC87C9c0CfC5B5245177A99E'
     const amount = '1000000000000000000'
     const sender = data[0]
-    
+
     // const balance = await simpleStorage.methods.balanceOf(recepient).call()
     // console.log('Balance is ', balance)
     const transfer = await simpleStorage.methods.transfer( recepient, amount)
@@ -93,6 +94,7 @@ if (receipt.status === true ){
      })
     // const txReceipt = transfer.wait() 
     // console.log(transfer)
+    
     if (transfer.status === true ){
       // console.log("Aquí sí")
       setTxReceipt(transfer)
