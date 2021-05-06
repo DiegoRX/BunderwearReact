@@ -64,8 +64,8 @@ function App() {
     //   from: data[0],
     //   gas: 21000,
     // })
-console.log(receipt, 'rewarded')
-setTxReceipt(receipt)
+// console.log(receipt, 'rewarded')
+// setTxReceipt(receipt)
     //const newData = await simpleStorage.readData();
 if (receipt.status === true ){
   alert('Lo lograste!')

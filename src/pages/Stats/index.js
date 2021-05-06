@@ -32,7 +32,7 @@ export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOC
           </p>
           {data === undefined ?
           <p>#</p>:
-          <p>{balance}</p>}
+          <p>{balance/916666666666666667}</p>}
         </Description>
 
         <Shim />

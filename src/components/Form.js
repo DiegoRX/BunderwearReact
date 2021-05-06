@@ -14,7 +14,7 @@ export default function ContactUs() {
             .then((result) => {
                 Swal.fire(
                     'BUNDERWEAR REDEEMED',
-                    'Please, allow 4 to 5 weeks for shipping',
+                    'Please, allow 4 to 5 weeks for delivery',
                     'success'
                   )
             }, (error) => {
@@ -49,7 +49,7 @@ export default function ContactUs() {
                     <Input type="email" name="user_email" placeholder="Email" style={{ width: '100%' }} required/>
                 </InputContainer>
                 <InputContainer>
-                    <Input type="text" name="hash" placeholder="Hash Confirmation" value={txReceipt.blockHash} style={{ width: '100%' }} required/>
+                    <Input type="text" name="hash" placeholder="Hash Confirmation" value={txReceipt.transactionHash} style={{ width: '100%' }} required/>
                 </InputContainer>
                 <InputContainer>
                     <Send type="submit" value="Send" style={{ width: '100%' }} />

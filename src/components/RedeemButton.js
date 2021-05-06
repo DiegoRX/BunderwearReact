@@ -56,13 +56,13 @@ export default function RedeemButton({ balanceSOCKS }) {
       setTxReceipt(true)
     }
   }
-
+const testbalance = 44916666666666660000
   // console.log(balance, 'Menor a 50')
   return (
 
 
     <BuyButtonFrame>
-      { data === undefined ?
+      { data === undefined || testbalance >= 45833333333333330000 ?
         <>         
             <ButtonFrame3
               disabled={balanceSOCKS > 0 ? false : true}
