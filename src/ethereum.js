@@ -10,7 +10,7 @@ const getBlockchain = () =>
       const accounts = await provider.request({ method: 'eth_requestAccounts' });
       const networkId = await provider.request({ method: 'net_version' })
       console.log('Ethereum successfully detected!')
-      console.log(accounts)
+      // console.log(accounts)
        const web3Provider = new Web3(window.ethereum);
      // provider = new ethers.providers.Web3Provider(provider);
 
@@ -31,9 +31,9 @@ const getBlockchain = () =>
       const recepient = '0x4621080FF83e0d2CcC87C9c0CfC5B5245177A99E'
 
       const balance = await simpleStorage.methods.balanceOf(recepient).call()
-      console.log('Balance is ', balance)
+      // console.log('Balance is ', balance)
       const addresses = await web3Provider.eth.getAccounts() 
-        console.log(addresses, simpleStorage, ABI, deployedNetwork, networkId, balance)
+        // console.log(addresses, simpleStorage, ABI, deployedNetwork, networkId, balance)
       resolve({simpleStorage, accounts, addresses, balance});
       
      

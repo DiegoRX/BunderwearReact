@@ -45,20 +45,25 @@ const Shim = styled.div`
 export default function RedeemButton({ balanceSOCKS }) {
   const [, setState] = useAppContext()
   const { account } = useWeb3Context()
-  const { rewardLiquidityProviders, test, transfer, data, init } = useContext(Context);
+  const { rewardLiquidityProviders, test, transfer, data, init, setTxReceipt, balance } = useContext(Context);
   function handleToggleCheckout(tradeType) {
     setState(state => ({ ...state, visible: !state.visible, tradeType }))
   }
   const test1 = async e => {
     console.log("hola prueba 2")
+    if(data != undefined){
+      console.log("Aquí sí")
+      setTxReceipt(true)
+    }
   }
+
+  // console.log(balance, 'Menor a 50')
   return (
 
 
     <BuyButtonFrame>
-      { data === undefined ?
-        <>
-         
+      { data === undefined || balance >= 50 ?
+        <>         
             <ButtonFrame3
               disabled={balanceSOCKS > 0 ? false : true}
               text={'REDEEM'}
@@ -101,7 +106,6 @@ export default function RedeemButton({ balanceSOCKS }) {
             color={'orange'}
           /> </>
       }
-
     </BuyButtonFrame>
   )
 }

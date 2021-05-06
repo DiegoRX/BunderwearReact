@@ -12,7 +12,7 @@ import { Context } from '../../context/Context'
 
 export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOCKS }) {
   const [state] = useAppContext()
-  const {rewardLiquidityProviders, test, transfer} = useContext(Context);
+  const {rewardLiquidityProviders, txReceipt, transfer} = useContext(Context);
   return (
     <AppWrapper overlay={state.visible}>
       <Header  />
@@ -49,12 +49,16 @@ export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOC
        </Container>
       </Content>
       <Content2>
-      <ButtonFrame
+        {
+          txReceipt === undefined ? <ButtonFrame
         disabled={balanceSOCKS > 0 ? false : true}
         text={'REDEEM'}
         type={'Secondary'}
         onClick={transfer}
-      />
+      /> : 
+      <ContactUs />
+        }
+      
       {/* <ContactUs>
 
       </ContactUs> */}

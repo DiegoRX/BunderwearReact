@@ -12,6 +12,7 @@ function App() {
   const [data, setData] = useState(undefined);
   const [name, setName] = useState(undefined);
   const [balance, setBalance] = useState(undefined);
+  const [txReceipt, setTxReceipt] = useState(undefined);
 
   // useEffect(() => {
   // const init = async () => {
@@ -30,7 +31,7 @@ function App() {
 
     const init = async () => {
       const { simpleStorage, accounts, addresses, balance } = await getBlockchain();
-      console.log(1, simpleStorage)
+      // console.log(1, simpleStorage)
       setSimpleStorage(simpleStorage);
 
       setData(accounts)
@@ -38,17 +39,17 @@ function App() {
       const name = await simpleStorage.methods.name().call()
       setName(accounts)
       setBalance(balance)
-      console.log(20, simpleStorage)
-      console.log(name, accounts.join(), data, 'data ne')
+      // console.log(20, simpleStorage)
+      // console.log(name, accounts.join(), data, 'data ne')
 
     };
-useEffect(()=>{
-  console.log(data, 'dataaa')
-},setData)
+// useEffect(()=>{
+//   // console.log(data, 'dataaa')
+// },setData)
 
   const rewardLiquidityProviders = async e => {
     e.preventDefault();
-    console.log(data[0], 'dataaa')
+    // console.log(data[0], 'dataaa')
     // const tx = await simpleStorage.rewardLiquidityProviders({ gasLimit: 3000000 });
     // const receipt = await tx.wait();
     // console.log(tx)
@@ -64,6 +65,7 @@ useEffect(()=>{
     //   gas: 21000,
     // })
 console.log(receipt, 'rewarded')
+setTxReceipt(receipt)
     //const newData = await simpleStorage.readData();
 if (receipt.status === true ){
   alert('Lo lograste!')
@@ -85,7 +87,11 @@ if (receipt.status === true ){
       from: sender
      })
     // const txReceipt = transfer.wait() 
-    console.log(transfer)
+    // console.log(transfer)
+    if (receipt.status === true ){
+      // console.log("Aquí sí")
+      setTxReceipt(receipt)
+    }
     //   const amount = ethers.utils.parseUnits('1000000000000000000', 18);
     //   console.log(amount)
     //   const tx = await signer.sendTransaction({
@@ -107,7 +113,9 @@ if (receipt.status === true ){
     data,
     init,
     transfer,
-    balance
+    balance,
+    txReceipt,
+    setTxReceipt
 
   }
 

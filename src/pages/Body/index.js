@@ -136,7 +136,7 @@ export function Header({ totalSupply, ready, balanceSOCKS, setShowConnect }) {
         {data === undefined ?
           <Burned1 onClick={init}>Connect Wallet</Burned1> :
           <span role="img" aria-label="fire">
-            <Burned1>{dataSliced.join().slice(0, 6)}...{dataSliced.join().slice(0, -4)}</Burned1>
+            <Burned1>{dataSliced.join().slice(0, 6)}...{dataSliced.join().slice(-4)}</Burned1>
           </span>
         }
 
@@ -261,6 +261,8 @@ export default function Body({ }) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  
   return (
     <AppWrapper overlay={state.visible}>
       <Header
@@ -287,7 +289,7 @@ export default function Body({ }) {
           <div style={{ marginBottom: '4px' }}>Buy and sell real BUNDERWEAR with digital currency.</div>
           <div style={{ marginBottom: '4px' }}>
             Delivered on demand.{' '}
-            <a href='/'
+            <A style={{color: '#007bff'}}
 
               // onClick={e => {
               //   e.preventDefault()
@@ -297,7 +299,7 @@ export default function Body({ }) {
               onClick={handleShow}
             >
               Learn more
-            </a>
+            </A>
           </div>
           {/* <SubInfo>
             An experiment in pricing and user experience by the team at Uniswap.{' '}
@@ -347,6 +349,11 @@ const Content = styled.div`
   width: calc(100vw - 32px);
   max-width: 375px;
   margin-top: 72px;
+`
+const A = styled.a`
+ :hover{
+   text-decoration: underline;
+ }
 `
 
 const Info = styled.div`
