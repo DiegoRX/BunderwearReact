@@ -129,7 +129,7 @@ export function Header({ totalSupply, ready, balanceSOCKS, setShowConnect }) {
           </Link> :
           <Link to="/stats" style={{ textDecoration: 'none' }}>
             <Burned>
-              ♥️ {balance} Redeemed
+              ♥️ Redeemed
             </Burned>
           </Link>
         }

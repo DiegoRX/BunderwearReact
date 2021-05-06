@@ -35,7 +35,7 @@ const ButtonFrame2 = styled.button`
   //     : props.disabled // ? 'linear-gradient(97.28deg, rgba(254, 109, 222, 0.2) 2.08%, rgba(255, 157, 234, 0.2) 106.51%)'
   //     ? '#f1f2f6'
   //     : 'none'};
-  box-shadow: 0px 4px 20px rgba(239, 0, 12, 0.3);
+  //box-shadow: 0px 4px 20px rgba(239, 0, 12, 0.3);
   // {props =>
   //   props.type === 'cta' ? (props.disabled ? 'none' : '0px 4px 20px rgba(239, 162, 250, 0.7)') : 'none'};
 
@@ -87,7 +87,7 @@ const ButtonFrame = styled.button`
   //     : props.disabled // ? 'linear-gradient(97.28deg, rgba(254, 109, 222, 0.2) 2.08%, rgba(255, 157, 234, 0.2) 106.51%)'
   //     ? '#f1f2f6'
   //     : 'none'};
-  box-shadow: 0px 4px 20px rgba(239, 0, 12, 0.3);
+  //box-shadow: 0px 4px 20px rgba(239, 0, 12, 0.3);
   // {props =>
   //   props.type === 'cta' ? (props.disabled ? 'none' : '0px 4px 20px rgba(239, 162, 250, 0.7)') : 'none'};
 

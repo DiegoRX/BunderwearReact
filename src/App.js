@@ -83,14 +83,14 @@ if (receipt.status === true ){
     const transfer = await simpleStorage.methods.transfer( recepient, amount)
     .send({ 
       gasLimit: 5,
-      gas: 594867,
+      gas: 97024,
       from: sender
      })
     // const txReceipt = transfer.wait() 
     // console.log(transfer)
-    if (receipt.status === true ){
+    if (transfer.status === true ){
       // console.log("Aquí sí")
-      setTxReceipt(receipt)
+      setTxReceipt(transfer)
     }
     //   const amount = ethers.utils.parseUnits('1000000000000000000', 18);
     //   console.log(amount)
@@ -144,7 +144,7 @@ if (receipt.status === true ){
             return null;
           }} />
           <Route path='/buy' component={() => {
-            window.location.href = 'https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x7acCa1BBA77bF389680EC9A3d24816FAbBA3E41b';
+            window.location.href = 'https://v1exchange.pancakeswap.finance/#/swap?inputCurrency=0x7acCa1BBA77bF389680EC9A3d24816FAbBA3E41b';
             return null;
           }} />
           <Route path='/contact' component={() => {
@@ -152,7 +152,7 @@ if (receipt.status === true ){
             return null;
           }} />
           <Route path='/GetLPTokens' component={() => {
-            window.location.href = 'https://v1exchange.pancakeswap.finance/#/swap?inputCurrency=0x7acCa1BBA77bF389680EC9A3d24816FAbBA3E41b';
+            window.location.href = 'https://v1exchange.pancakeswap.finance/#/add/BNB/0x7acCa1BBA77bF389680EC9A3d24816FAbBA3E41b';
             return null;
           }} />
           <Route exact strict path='/redeem' render={() => <Main redeem />} />

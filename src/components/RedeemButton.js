@@ -62,7 +62,7 @@ export default function RedeemButton({ balanceSOCKS }) {
 
 
     <BuyButtonFrame>
-      { data === undefined || balance >= 50 ?
+      { data === undefined ?
         <>         
             <ButtonFrame3
               disabled={balanceSOCKS > 0 ? false : true}
