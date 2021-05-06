@@ -87,7 +87,7 @@ if (receipt.status === true ){
       from: sender
      })
     // const txReceipt = transfer.wait() 
-    // console.log(transfer)
+    console.log(transfer)
     if (transfer.status === true ){
       // console.log("Aquí sí")
       setTxReceipt(transfer)
