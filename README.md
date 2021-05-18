@@ -1,4 +1,4 @@
-# BUNDERWEAR.
+# BUNDERWEAR. 🩲
 
 The DAPP for getting you BUNDEWEAR. This DAPP was developed on demand by the Bunderwear team. The purpose of the DAPP is allowing users to get a pair of Bunderwear by redeeming BNB tokens. By reedeming the tokens the cryptocurrencie gets a higger Market Cap, producing a voloriation of the BNB coin. The DAPP has a second funtionability that allows provider of tokens getting a return over invensment providing them liquitidy over the market cap. Both transactions are made by **web3** and **Metamask**. 
 
