@@ -2,116 +2,20 @@ import React, { useState, useCallback, useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import { useWeb3Context } from 'web3-react'
 import { Link } from 'react-router-dom'
-// import BUNDERWEAR from '../../../../build/contracts/BUNDERWEAR.json';
 import { Context } from '../../context/Context';
-import { ethers, Signer } from 'ethers'
 import Modal from 'react-bootstrap/Modal';
 import { useAppContext } from '../../context'
 import Card from '../../components/Card'
 import BuyButtons from '../../components/Buttons'
 import RedeemButton from '../../components/RedeemButton'
-import Checkout from '../../components/Checkout'
-import { amountFormatter } from '../../utils'
-import ContactUs from '../../components/Form'
-import getBlockchain from '../../ethereum.js';
-
 
 export function Header({ totalSupply, ready, balanceSOCKS, setShowConnect }) {
-  //   const context = useWeb3Context()
-  //   const { account, setConnector, library} = useWeb3Context()
 
-  // //   console.log(context)
-  // function handleAccount() {
-  //   setConnector('Metamask', { suppressAndThrowErrors: true }).catch(error => {
-  //     setShowConnect(true)
-  //   })
-  // }
-  // handleAccount()
-  // console.log(context)
+  const { balance, data, init } = useContext(Context);
 
-  //   const CONTRACT_ADDRESS = BUNDERWEAR.networks['5777'].address;
-  //   const provider = new ethers.providers.JsonRpcProvider('https://data-seed-prebsc-1-s1.binance.org:8545/')
-
-  //   console.log(CONTRACT_ADDRESS)
-  //   console.log(10,account, 10)
-  //   console.log(provider)
-
-  //   function sign() {
-  //     const timestampToSign = Math.round(Date.now() / 1000)
-  //     const signer = library.getSigner()
-  //     const message = `This signature is proof that I control the private key of ${account} as of the timestamp ${timestampToSign}.\n\n It will be used to access my Unisocks order history.`
-  //     signer.signMessage(message).then(returnedSignature => {
-  //       // setTimestamp(timestampToSign)
-  //       // setSignature(returnedSignature)
-  //       console.log(message)
-  //     })
-  //     console.log(message)
-  //   }
-  //   sign()
-
-  //  async function init1() {
-  //   const ABI = [
-  //     'function name() public view returns (string memory) ',
-  //     'function transfer(address recipient, uint256 amount) external returns (bool) '
-  //   ]
-
-  // const contracts = new ethers.Contract(CONTRACT_ADDRESS, ABI, provider)
-  // console.log(5, contracts)
-  // let name1 = await contracts.name()
-  // // .catch(err => {
-  // //   console.log(err.toString());
-  // //   provider.getBlockNumber().then(console.log)
-  // // });
-  // console.log(1,name1)
-
-  //   const signer = library.getSigner()
-
-  //   console.log(library)
-  //   const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
-  //   txResponse = await contract.transfer({
-  //     recepient: '0x000000000000000000000000000000000000dead',
-  //     value: 1000000
-  //   }).catch(err => {
-  //   console.log(err.toString());
-  //   provider.getBlockNumber().then(console.log)
-  // });;
-  //   txReceipt = await txResponse.wait();
-  //   console.log(txReceipt)
-  // }
-  // init1()
-  //  const init = async () => {
-  //    const { simpleStorage, accounts } = await getBlockchain();
-  //    console.log(1, simpleStorage)
-  //    setSimpleStorage(simpleStorage);
-
-
-  //  console.log(20, simpleStorage)
-  //  console.log(data, 'data pues')
-  //  };
-  //  useEffect(() => {
-  //  const init = async () => {
-
-  //    const { simpleStorage, accounts } = await getBlockchain();
-  //    console.log(1, simpleStorage)
-  //    setSimpleStorage(simpleStorage);
-
-
-  //  console.log(20, simpleStorage)
-  //  console.log(data, 'data pues')
-  //  };
-  //  }, []);
-  const [tester, setTester] = useState(null);
-
-
-  const [showBalance, setShowBalance] = useState(undefined);
-
-  const { rewardLiquidityProviders, balance, data, init } = useContext(Context);
-  
   const dataSliced = data
   return (
-    <HeaderFrame
-    // balanceSOCKS={balanceSOCKS}
-    >
+    <HeaderFrame>
       <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
         <Unicorn>
           <span role="img" aria-label="unicorn">
@@ -129,7 +33,7 @@ export function Header({ totalSupply, ready, balanceSOCKS, setShowConnect }) {
           </Link> :
           <Link to="/stats" style={{ textDecoration: 'none' }}>
             <Burned>
-              ♥️ {balance/916666666666666667} Redeemed
+              ♥️ {balance / 916666666666666667} Redeemed
             </Burned>
           </Link>
         }
@@ -139,21 +43,6 @@ export function Header({ totalSupply, ready, balanceSOCKS, setShowConnect }) {
             <Burned1>{dataSliced.join().slice(0, 6)}...{dataSliced.join().slice(-4)}</Burned1>
           </span>
         }
-
-        {/* {500 - totalSupply} <HideMobile>redeemed</HideMobile> */}
-
-
-        {/* <Account onClick={() => handleAccount()} balanceSOCKS={balanceSOCKS}>
-          {account ?  (
-
-              <SockCount>{account.slice(0, 6)}...</SockCount>
-            )
-            : (
-            <SockCount>Connect Wallet</SockCount>
-          )}
-
-          <Status balanceSOCKS={balanceSOCKS} ready={ready} account={account} />
-        </Account> */}
       </div>
     </HeaderFrame>
   )
@@ -170,21 +59,6 @@ const HeaderFrame = styled.div`
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem;
-`
-
-const Account = styled.div`
-  background-color: ${props => (props.balanceSOCKS ? '#f1f2f6' : props.theme.blue)};
-  padding: 0.75rem;
-  border-radius: 6px;
-  // cursor: ${props => (props.balanceSOCKS ? 'auto' : 'pointer')};
-
-  transform: scale(1);
-  transition: transform 0.3s ease;
-
-  :hover {
-    // transform: ${props => (props.balanceSOCKS ? 'scale(1)' : 'scale(1.02)')};
-    text-decoration: underline;
-  }
 `
 
 const Burned = styled.div`
@@ -226,33 +100,6 @@ const Burned1 = styled.div`
   color: white;
 `
 
-const HideMobile = styled.span`
-  @media only screen and (max-width: 480px) {
-    display: none;
-  }
-`
-
-const SockCount = styled.p`
-  color: #6c7284;
-  font-weight: 500;
-  margin: 0px;
-  font-size: 14px;
-  float: left;
-`
-
-const Status = styled.div`
-  display: ${props => (props.balanceSOCKS ? 'initial' : 'none')};
-  width: 12px;
-  height: 12px;
-  border-radius: 100%;
-  margin-left: 12px;
-  margin-top: 2px;
-  float: right;
-  background-color: ${props =>
-    props.account === null ? props.theme.orange : props.ready ? props.theme.green : props.theme.orange};
-  // props.account === null ? props.theme.orange : props.theme.green};
-`
-
 export default function Body({ }) {
   const { account } = useWeb3Context()
 
@@ -262,7 +109,7 @@ export default function Body({ }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  
+
   return (
     <AppWrapper overlay={state.visible}>
       <Header
@@ -289,31 +136,12 @@ export default function Body({ }) {
           <div style={{ marginBottom: '4px' }}>Buy and sell real BUNDERWEAR with digital currency.</div>
           <div style={{ marginBottom: '4px' }}>
             Delivered on demand.{' '}
-            <A style={{color: '#007bff'}}
-
-              // onClick={e => {
-              //   e.preventDefault()
-              //   setState(state => ({ ...state, visible: !state.visible }))
-
-              // }}
+            <A style={{ color: '#007bff' }}
               onClick={handleShow}
             >
               Learn more
             </A>
           </div>
-          {/* <SubInfo>
-            An experiment in pricing and user experience by the team at Uniswap.{' '}
-            <a
-              href="/"
-              onClick={e => {
-                e.preventDefault()
-                setState(state => ({ ...state, visible: !state.visible }))
-                setShowWorks(true)
-              }}
-            >
-              How it works.
-            </a>
-          </SubInfo> */}
         </Info>
         <BuyButtons />
         <RedeemButton />
@@ -324,9 +152,6 @@ export default function Body({ }) {
         )}
       </Content>
 
-
-      <Checkout
-      />
     </AppWrapper>
   )
 }

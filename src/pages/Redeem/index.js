@@ -1,67 +1,61 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { useAppContext } from '../../context'
 import { Header } from '../Body'
-import { amountFormatter } from '../../utils'
 import bunderwear from '../../components/Gallery/genesis.png'
 import NFT from '../../components/Gallery/genesisnftfinalhd.gif'
 import ContactUs from '../../components/Form'
-import Button from '../../components/Button' 
-import ButtonGrey from '../../components/ButtonGrey' 
+import Button from '../../components/Button'
 import { Context } from '../../context/Context'
 
 export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOCKS }) {
   const [state] = useAppContext()
-  const {rewardLiquidityProviders, txReceipt, transfer} = useContext(Context);
+  const { txReceipt, transfer } = useContext(Context);
   return (
     <AppWrapper overlay={state.visible}>
-      <Header  />
+      <Header />
       <Content>
         <Title>PAY / order details</Title>
-        
-       <Container>
-           <Box>
-               <Left>
-               <ImgStyle src={bunderwear} alt="Logo" />
-               </Left>
-               <Right>
-                    <Description>
-                        1 BUNDERWEAR
+
+        <Container>
+          <Box>
+            <Left>
+              <ImgStyle src={bunderwear} alt="Logo" />
+            </Left>
+            <Right>
+              <Description>
+                1 BUNDERWEAR
                     </Description>
-                    <Description>
-                        One size fits most
+              <Description>
+                One size fits most
                     </Description>
-               </Right>
-           </Box>
-           <Box>
-               <Left>
-               <ImgStyle src={NFT} alt="Logo" />
-               </Left>
-               <Right>
-                    <Description>
-                       1 BUNDERWEAR NFT
+            </Right>
+          </Box>
+          <Box>
+            <Left>
+              <ImgStyle src={NFT} alt="Logo" />
+            </Left>
+            <Right>
+              <Description>
+                1 BUNDERWEAR NFT
                     </Description>
-                    <Description>
-                       Digital Colectible
+              <Description>
+                Digital Colectible
                     </Description>
-               </Right>
-           </Box>
-       </Container>
+            </Right>
+          </Box>
+        </Container>
       </Content>
       <Content2>
         {
           txReceipt === undefined ? <ButtonFrame
-        disabled={balanceSOCKS > 0 ? false : true}
-        text={'REDEEM'}
-        type={'Secondary'}
-        onClick={transfer}
-      /> : 
-      <ContactUs />
+            disabled={balanceSOCKS > 0 ? false : true}
+            text={'REDEEM'}
+            type={'Secondary'}
+            onClick={transfer}
+          /> :
+            <ContactUs />
         }
-      
-      {/* <ContactUs>
-
-      </ContactUs> */}
       </Content2>
     </AppWrapper>
   )
@@ -70,7 +64,7 @@ export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOC
 const ButtonFrame = styled(Button)`
   width: 100%;
 `
- 
+
 const Footer = styled.p`
   margin-right: 2rem;
   margin-left: 2rem;
@@ -82,10 +76,6 @@ const Footer = styled.p`
     color: #fe6dde;
     margin-bottom: 1rem;
   }
-`
-
-const Shim = styled.div`
-  height: 5rem;
 `
 
 const ImgStyle = styled.img`

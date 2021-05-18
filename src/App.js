@@ -8,105 +8,60 @@ import { Context } from './context/Context';
 import Swal from 'sweetalert2';
 
 function App() {
-  const [signer, setSigner] = useState(undefined);
   const [simpleStorage, setSimpleStorage] = useState(undefined);
   const [data, setData] = useState(undefined);
-  const [name, setName] = useState(undefined);
   const [balance, setBalance] = useState(undefined);
   const [txReceipt, setTxReceipt] = useState(undefined);
 
-  // useEffect(() => {
-  // const init = async () => {
-  //   const { simpleStorage, accounts } = await getBlockchain();
-  //   console.log(1, simpleStorage)
-  //   setSimpleStorage(simpleStorage);
-  //   setData(accounts)
+  const init = async () => {
+    const { simpleStorage, accounts, balance } = await getBlockchain();
+    setSimpleStorage(simpleStorage);
 
-  // console.log(20, simpleStorage)
-  // console.log(data, 'data puesx')
+    setData(accounts)
+ 
+    setBalance(balance)
 
-  // };
-  // }, []);
-
-
-
-    const init = async () => {
-      const { simpleStorage, accounts, addresses, balance } = await getBlockchain();
-      // console.log(1, simpleStorage)
-      setSimpleStorage(simpleStorage);
-
-      setData(accounts)
-      // const name = await simpleStorage.methods.name().call()
-      const name = await simpleStorage.methods.name().call()
-      setName(accounts)
-      setBalance(balance)
-      // console.log(20, simpleStorage)
-      // console.log(name, accounts.join(), data, 'data ne')
-
-    };
-// useEffect(()=>{
-//   // console.log(data, 'dataaa')
-// },setData)
+  };
 
   const rewardLiquidityProviders = async e => {
     e.preventDefault();
-    // console.log(data[0], 'dataaa')
-    // const tx = await simpleStorage.rewardLiquidityProviders({ gasLimit: 3000000 });
-    // const receipt = await tx.wait();
-    // console.log(tx)
-    // console.log(receipt)
+
     const receipt = await simpleStorage.methods.rewardLiquidityProviders().send({
       from: data[0],
       gasLimit: 5,
       gas: 594867,
       to: '0x721b3F5ecb66096E6323dE712a8819Ce43A26dFa'
     })
-    // .send({
-    //   from: data[0],
-    //   gas: 21000,
-    // })
-// console.log(receipt, 'rewarded')
-// setTxReceipt(receipt)
-    //const newData = await simpleStorage.readData();
-if (receipt.status === true ){
 
-  Swal.fire(
-    'LP rewarded successfully',
-    '',
-    'success'
-  )
-}
+    if (receipt.status === true) {
+
+      Swal.fire(
+        'LP rewarded successfully',
+        '',
+        'success'
+      )
+    }
   };
   const transfer = async e => {
     e.preventDefault();
-    
+
     const recepient = '0x4621080FF83e0d2CcC87C9c0CfC5B5245177A99E'
     const amount = '1000000000000000000'
     const sender = data[0]
 
-    // const balance = await simpleStorage.methods.balanceOf(recepient).call()
-    // console.log('Balance is ', balance)
-    const transfer = await simpleStorage.methods.transfer( recepient, amount)
-    .send({ 
-      gasLimit: 5,
-      gas: 97024,
-      from: sender
-     })
-    // const txReceipt = transfer.wait() 
-    // console.log(transfer)
-    
-    if (transfer.status === true ){
-      // console.log("Aquí sí")
+    const transfer = await simpleStorage.methods.transfer(recepient, amount)
+      .send({
+        gasLimit: 5,
+        gas: 97024,
+        from: sender
+      })
+  
+
+    if (transfer.status === true) {
       setTxReceipt(transfer)
       console.log('redeemed')
     }
-    //   const amount = ethers.utils.parseUnits('1000000000000000000', 18);
-    //   console.log(amount)
-    //   const tx = await signer.sendTransaction({
-    //     to: 0x000000000000000000000000000000000000dead,
-    //     value: amount
-    //   });
-    //   await tx.wait();
+  
   };
 
   const test = async e => {
@@ -171,5 +126,3 @@ if (receipt.status === true ){
 }
 
 export default App;
- //https://data-seed-prebsc-1-s1.binance.org:8545
- // 97  BNB 

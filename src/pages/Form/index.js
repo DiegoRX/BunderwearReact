@@ -1,8 +1,7 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { useAppContext } from '../../context'
 import { Header } from '../Body'
-import { amountFormatter } from '../../utils'
 import ContactUs from '../../components/Form'
 
 export default function Form({ totalSupply, reserveSOCKSToken, ready, balanceSOCKS }) {
@@ -10,24 +9,15 @@ export default function Form({ totalSupply, reserveSOCKSToken, ready, balanceSOC
 
   return (
     <AppWrapper overlay={state.visible}>
-      <Header  />
+      <Header />
       <Content>
         <Title>Pay / order details</Title>
-        <p style={{color:'white', marginLeft:'33px', marginBottom:'3px'}}>Where should we send them?</p>
+        <p style={{ color: 'white', marginLeft: '33px', marginBottom: '3px' }}>Where should we send them?</p>
         <ContactUs />
-
         <Footer>
-        Hash confirmation is required. We will verify the request.
+          Hash confirmation is required. We will verify the request.
           <br />
-          
           <br />
-          {/* <a
-            href="https://medium.com/frst/money-laundry-the-rise-of-the-crypto-sock-market-f979aafc3796"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read more.
-          </a> */}
         </Footer>
       </Content>
     </AppWrapper>
@@ -45,10 +35,6 @@ const Footer = styled.p`
     color: #fe6dde;
     margin-bottom: 1rem;
   }
-`
-
-const Shim = styled.div`
-  height: 5rem;
 `
 
 const AppWrapper = styled.div`

@@ -7,8 +7,8 @@ import { Context } from '../../context/Context'
 
 export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOCKS }) {
 
-  const { rewardLiquidityProviders, balance, data, init } = useContext(Context)
-
+  const { balance, data, init } = useContext(Context)
+  const UNIT_VALUE = 916666666666666667
   return (
     <AppWrapper >
       <Header  />
@@ -32,7 +32,7 @@ export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOC
           </p>
           {data === undefined ?
           <p>#</p>:
-          <p>{balance/916666666666666667}</p>}
+          <p>{balance/UNIT_VALUE}</p>}
         </Description>
 
         <Shim />
@@ -42,7 +42,6 @@ export default function Body({ totalSupply, reserveSOCKSToken, ready, balanceSOC
         : <p></p>}
           <br />
           <br />
-
         </Footer>
       </Content>
     </AppWrapper>
