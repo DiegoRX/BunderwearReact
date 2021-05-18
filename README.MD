@@ -8,3 +8,5 @@ To connect to the BSC follow the next guide:
 https://academy.binance.com/es/articles/connecting-metamask-to-binance-smart-chain
 
 ##Check the deployed code on https://bunderwear.club
+
+BEST BLOCKCHAIN DEV EVER
